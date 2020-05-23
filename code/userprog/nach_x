@@ -1,0 +1,1448 @@
+
+nachos:     file format elf32-i386
+nachos
+architecture: i386, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x08048d40
+
+Program Header:
+    PHDR off    0x00000034 vaddr 0x08048034 paddr 0x08048034 align 2**2
+         filesz 0x00000120 memsz 0x00000120 flags r-x
+  INTERP off    0x00000154 vaddr 0x08048154 paddr 0x08048154 align 2**0
+         filesz 0x00000013 memsz 0x00000013 flags r--
+    LOAD off    0x00000000 vaddr 0x08048000 paddr 0x08048000 align 2**12
+         filesz 0x00017fce memsz 0x00017fce flags r-x
+    LOAD off    0x00018e94 vaddr 0x08060e94 paddr 0x08060e94 align 2**12
+         filesz 0x00000a0c memsz 0x00000c8c flags rw-
+ DYNAMIC off    0x00018f04 vaddr 0x08060f04 paddr 0x08060f04 align 2**2
+         filesz 0x000000f8 memsz 0x000000f8 flags rw-
+    NOTE off    0x00000168 vaddr 0x08048168 paddr 0x08048168 align 2**2
+         filesz 0x00000044 memsz 0x00000044 flags r--
+EH_FRAME off    0x000139b0 vaddr 0x0805b9b0 paddr 0x0805b9b0 align 2**2
+         filesz 0x00000cbc memsz 0x00000cbc flags r--
+   STACK off    0x00000000 vaddr 0x00000000 paddr 0x00000000 align 2**4
+         filesz 0x00000000 memsz 0x00000000 flags rwx
+   RELRO off    0x00018e94 vaddr 0x08060e94 paddr 0x08060e94 align 2**0
+         filesz 0x0000016c memsz 0x0000016c flags r--
+
+Dynamic Section:
+  NEEDED               libstdc++.so.6
+  NEEDED               libgcc_s.so.1
+  NEEDED               libc.so.6
+  INIT                 0x08048a9c
+  FINI                 0x08059a74
+  INIT_ARRAY           0x08060e94
+  INIT_ARRAYSZ         0x00000068
+  FINI_ARRAY           0x08060efc
+  FINI_ARRAYSZ         0x00000004
+  GNU_HASH             0x080481ac
+  STRTAB               0x08048508
+  SYMTAB               0x080481f8
+  STRSZ                0x0000033a
+  SYMENT               0x00000010
+  DEBUG                0x00000000
+  PLTGOT               0x08061000
+  PLTRELSZ             0x00000138
+  PLTREL               0x00000011
+  JMPREL               0x08048964
+  REL                  0x08048934
+  RELSZ                0x00000030
+  RELENT               0x00000008
+  VERNEED              0x080488a4
+  VERNEEDNUM           0x00000003
+  VERSYM               0x08048842
+
+Version References:
+  required from libgcc_s.so.1:
+    0x0b792650 0x00 07 GCC_3.0
+  required from libc.so.6:
+    0x0d696914 0x00 06 GLIBC_2.4
+    0x09691f73 0x00 04 GLIBC_2.1.3
+    0x0d696910 0x00 03 GLIBC_2.0
+  required from libstdc++.so.6:
+    0x056bafd3 0x00 05 CXXABI_1.3
+    0x08922974 0x00 02 GLIBCXX_3.4
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .interp       00000013  08048154  08048154  00000154  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .note.ABI-tag 00000020  08048168  08048168  00000168  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .note.gnu.build-id 00000024  08048188  08048188  00000188  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .gnu.hash     0000004c  080481ac  080481ac  000001ac  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .dynsym       00000310  080481f8  080481f8  000001f8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .dynstr       0000033a  08048508  08048508  00000508  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .gnu.version  00000062  08048842  08048842  00000842  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .gnu.version_r 00000090  080488a4  080488a4  000008a4  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .rel.dyn      00000030  08048934  08048934  00000934  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .rel.plt      00000138  08048964  08048964  00000964  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 10 .init         00000023  08048a9c  08048a9c  00000a9c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 11 .plt          00000280  08048ac0  08048ac0  00000ac0  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .text         00010d32  08048d40  08048d40  00000d40  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .fini         00000014  08059a74  08059a74  00011a74  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .rodata       00001f0e  08059aa0  08059aa0  00011aa0  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 15 .eh_frame_hdr 00000cbc  0805b9b0  0805b9b0  000139b0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 16 .eh_frame     00003658  0805c66c  0805c66c  0001466c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 17 .gcc_except_table 0000030a  0805fcc4  0805fcc4  00017cc4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 18 .init_array   00000068  08060e94  08060e94  00018e94  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 19 .fini_array   00000004  08060efc  08060efc  00018efc  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 20 .jcr          00000004  08060f00  08060f00  00018f00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 21 .dynamic      000000f8  08060f04  08060f04  00018f04  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 22 .got          00000004  08060ffc  08060ffc  00018ffc  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 23 .got.plt      000000a8  08061000  08061000  00019000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 24 .data         000007e0  080610c0  080610c0  000190c0  2**5
+                  CONTENTS, ALLOC, LOAD, DATA
+ 25 .bss          00000280  080618a0  080618a0  000198a0  2**5
+                  ALLOC
+ 26 .comment      00000056  00000000  00000000  000198a0  2**0
+                  CONTENTS, READONLY
+ 27 .debug_aranges 000009b0  00000000  00000000  000198f6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 28 .debug_info   00040881  00000000  00000000  0001a2a6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 29 .debug_abbrev 0000992b  00000000  00000000  0005ab27  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 30 .debug_line   00008229  00000000  00000000  00064452  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 31 .debug_str    0000514f  00000000  00000000  0006c67b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 32 .debug_ranges 000007c8  00000000  00000000  000717ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+08048154 l    d  .interp	00000000              .interp
+08048168 l    d  .note.ABI-tag	00000000              .note.ABI-tag
+08048188 l    d  .note.gnu.build-id	00000000              .note.gnu.build-id
+080481ac l    d  .gnu.hash	00000000              .gnu.hash
+080481f8 l    d  .dynsym	00000000              .dynsym
+08048508 l    d  .dynstr	00000000              .dynstr
+08048842 l    d  .gnu.version	00000000              .gnu.version
+080488a4 l    d  .gnu.version_r	00000000              .gnu.version_r
+08048934 l    d  .rel.dyn	00000000              .rel.dyn
+08048964 l    d  .rel.plt	00000000              .rel.plt
+08048a9c l    d  .init	00000000              .init
+08048ac0 l    d  .plt	00000000              .plt
+08048d40 l    d  .text	00000000              .text
+08059a74 l    d  .fini	00000000              .fini
+08059aa0 l    d  .rodata	00000000              .rodata
+0805b9b0 l    d  .eh_frame_hdr	00000000              .eh_frame_hdr
+0805c66c l    d  .eh_frame	00000000              .eh_frame
+0805fcc4 l    d  .gcc_except_table	00000000              .gcc_except_table
+08060e94 l    d  .init_array	00000000              .init_array
+08060efc l    d  .fini_array	00000000              .fini_array
+08060f00 l    d  .jcr	00000000              .jcr
+08060f04 l    d  .dynamic	00000000              .dynamic
+08060ffc l    d  .got	00000000              .got
+08061000 l    d  .got.plt	00000000              .got.plt
+080610c0 l    d  .data	00000000              .data
+080618a0 l    d  .bss	00000000              .bss
+00000000 l    d  .comment	00000000              .comment
+00000000 l    d  .debug_aranges	00000000              .debug_aranges
+00000000 l    d  .debug_info	00000000              .debug_info
+00000000 l    d  .debug_abbrev	00000000              .debug_abbrev
+00000000 l    d  .debug_line	00000000              .debug_line
+00000000 l    d  .debug_str	00000000              .debug_str
+00000000 l    d  .debug_ranges	00000000              .debug_ranges
+00000000 l    df *ABS*	00000000              crtstuff.c
+08060f00 l     O .jcr	00000000              __JCR_LIST__
+08048d80 l     F .text	00000000              deregister_tm_clones
+08048db0 l     F .text	00000000              register_tm_clones
+08048df0 l     F .text	00000000              __do_global_dtors_aux
+08061aec l     O .bss	00000001              completed.6600
+08060efc l     O .fini_array	00000000              __do_global_dtors_aux_fini_array_entry
+08048e10 l     F .text	00000000              frame_dummy
+08060e94 l     O .init_array	00000000              __frame_dummy_init_array_entry
+00000000 l    df *ABS*	00000000              bitmap.cc
+08061aed l     O .bss	00000001              _ZStL8__ioinit
+0804970f l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+08059aea l     O .rodata	00000001              _ZL6dbgAll
+08059aeb l     O .rodata	00000001              _ZL9dbgThread
+08059aec l     O .rodata	00000001              _ZL8dbgSynch
+08059aed l     O .rodata	00000001              _ZL6dbgInt
+08059aee l     O .rodata	00000001              _ZL7dbgMach
+08059aef l     O .rodata	00000001              _ZL7dbgDisk
+08059af0 l     O .rodata	00000001              _ZL7dbgFile
+08059af1 l     O .rodata	00000001              _ZL7dbgAddr
+08059af2 l     O .rodata	00000001              _ZL6dbgNet
+08059af3 l     O .rodata	00000001              _ZL6dbJohn
+08059af4 l     O .rodata	00000004              _ZL10BitsInByte
+08059af8 l     O .rodata	00000004              _ZL10BitsInWord
+0804974e l     F .text	0000001c              _GLOBAL__sub_I__ZN6BitMapC2Ei
+00000000 l    df *ABS*	00000000              debug.cc
+08061aee l     O .bss	00000001              _ZStL8__ioinit
+080497d4 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+08059afc l     O .rodata	00000001              _ZL6dbgAll
+08059afd l     O .rodata	00000001              _ZL9dbgThread
+08059afe l     O .rodata	00000001              _ZL8dbgSynch
+08059aff l     O .rodata	00000001              _ZL6dbgInt
+08059b00 l     O .rodata	00000001              _ZL7dbgMach
+08059b01 l     O .rodata	00000001              _ZL7dbgDisk
+08059b02 l     O .rodata	00000001              _ZL7dbgFile
+08059b03 l     O .rodata	00000001              _ZL7dbgAddr
+08059b04 l     O .rodata	00000001              _ZL6dbgNet
+08059b05 l     O .rodata	00000001              _ZL6dbJohn
+08049813 l     F .text	0000001c              _GLOBAL__sub_I__ZN5DebugC2EPc
+00000000 l    df *ABS*	00000000              libtest.cc
+08061aef l     O .bss	00000001              _ZStL8__ioinit
+0804982f l     F .text	00000028              _ZL10IntCompareii
+08049857 l     F .text	00000008              _ZL7HashInti
+0804985f l     F .text	00000013              _ZL7HashKeyPc
+080610e0 l     O .data	0000000c              _ZL14listTestVector
+08061100 l     O .data	0000003c              _ZL14hashTestVector
+08049a00 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+08059b78 l     O .rodata	00000004              _ZL10BitsInByte
+08059b7c l     O .rodata	00000004              _ZL10BitsInWord
+08059b80 l     O .rodata	00000001              _ZL6dbgAll
+08059b81 l     O .rodata	00000001              _ZL9dbgThread
+08059b82 l     O .rodata	00000001              _ZL8dbgSynch
+08059b83 l     O .rodata	00000001              _ZL6dbgInt
+08059b84 l     O .rodata	00000001              _ZL7dbgMach
+08059b85 l     O .rodata	00000001              _ZL7dbgDisk
+08059b86 l     O .rodata	00000001              _ZL7dbgFile
+08059b87 l     O .rodata	00000001              _ZL7dbgAddr
+08059b88 l     O .rodata	00000001              _ZL6dbgNet
+08059b89 l     O .rodata	00000001              _ZL6dbJohn
+08059b8c l     O .rodata	00000004              _ZL14InitialBuckets
+08059b90 l     O .rodata	00000004              _ZL11ResizeRatio
+08059b94 l     O .rodata	00000004              _ZL14IncreaseSizeBy
+08049a3f l     F .text	0000001c              _GLOBAL__sub_I__Z11LibSelfTestv
+00000000 l    df *ABS*	00000000              sysdep.cc
+08061af0 l     O .bss	00000001              _ZStL8__ioinit
+0804cb1e l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+08059c6a l     O .rodata	00000001              _ZL6dbgAll
+08059c6b l     O .rodata	00000001              _ZL9dbgThread
+08059c6c l     O .rodata	00000001              _ZL8dbgSynch
+08059c6d l     O .rodata	00000001              _ZL6dbgInt
+08059c6e l     O .rodata	00000001              _ZL7dbgMach
+08059c6f l     O .rodata	00000001              _ZL7dbgDisk
+08059c70 l     O .rodata	00000001              _ZL7dbgFile
+08059c71 l     O .rodata	00000001              _ZL7dbgAddr
+08059c72 l     O .rodata	00000001              _ZL6dbgNet
+08059c73 l     O .rodata	00000001              _ZL6dbJohn
+0804cb5d l     F .text	0000001c              _GLOBAL__sub_I__Z15CallOnUserAbortPFviE
+00000000 l    df *ABS*	00000000              interrupt.cc
+08061af1 l     O .bss	00000001              _ZStL8__ioinit
+0806113c l     O .data	00000008              _ZL13intLevelNames
+08061144 l     O .data	0000001c              _ZL12intTypeNames
+0804cb99 l     F .text	00000038              _ZL14PendingCompareP16PendingInterruptS0_
+0804d47f l     F .text	00000060              _ZL12PrintPendingP16PendingInterrupt
+0804d591 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+08059eb6 l     O .rodata	00000001              _ZL6dbgAll
+08059eb7 l     O .rodata	00000001              _ZL9dbgThread
+08059eb8 l     O .rodata	00000001              _ZL8dbgSynch
+08059eb9 l     O .rodata	00000001              _ZL6dbgInt
+08059eba l     O .rodata	00000001              _ZL7dbgMach
+08059ebb l     O .rodata	00000001              _ZL7dbgDisk
+08059ebc l     O .rodata	00000001              _ZL7dbgFile
+08059ebd l     O .rodata	00000001              _ZL7dbgAddr
+08059ebe l     O .rodata	00000001              _ZL6dbgNet
+08059ebf l     O .rodata	00000001              _ZL6dbJohn
+08059ec0 l     O .rodata	00000004              _ZL8PageSize
+08059ec4 l     O .rodata	00000004              _ZL12NumPhysPages
+08059ec8 l     O .rodata	00000004              _ZL10MemorySize
+08059ecc l     O .rodata	00000004              _ZL7TLBSize
+08059ed0 l     O .rodata	00000004              _ZL9StackSize
+08059ed4 l     O .rodata	00000004              _ZL8UserTick
+08059ed8 l     O .rodata	00000004              _ZL10SystemTick
+08059edc l     O .rodata	00000004              _ZL12RotationTime
+08059ee0 l     O .rodata	00000004              _ZL8SeekTime
+08059ee4 l     O .rodata	00000004              _ZL11ConsoleTime
+08059ee8 l     O .rodata	00000004              _ZL11NetworkTime
+08059eec l     O .rodata	00000004              _ZL10TimerTicks
+08059ef0 l     O .rodata	00000004              _ZL10SectorSize
+08059ef4 l     O .rodata	00000004              _ZL15SectorsPerTrack
+08059ef8 l     O .rodata	00000004              _ZL9NumTracks
+08059efc l     O .rodata	00000004              _ZL10NumSectors
+0804d5d0 l     F .text	0000001c              _GLOBAL__sub_I__ZN16PendingInterruptC2EP11CallBackObji7IntType
+00000000 l    df *ABS*	00000000              stats.cc
+08061af2 l     O .bss	00000001              _ZStL8__ioinit
+0804e336 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a027 l     O .rodata	00000001              _ZL6dbgAll
+0805a028 l     O .rodata	00000001              _ZL9dbgThread
+0805a029 l     O .rodata	00000001              _ZL8dbgSynch
+0805a02a l     O .rodata	00000001              _ZL6dbgInt
+0805a02b l     O .rodata	00000001              _ZL7dbgMach
+0805a02c l     O .rodata	00000001              _ZL7dbgDisk
+0805a02d l     O .rodata	00000001              _ZL7dbgFile
+0805a02e l     O .rodata	00000001              _ZL7dbgAddr
+0805a02f l     O .rodata	00000001              _ZL6dbgNet
+0805a030 l     O .rodata	00000001              _ZL6dbJohn
+0805a034 l     O .rodata	00000004              _ZL8UserTick
+0805a038 l     O .rodata	00000004              _ZL10SystemTick
+0805a03c l     O .rodata	00000004              _ZL12RotationTime
+0805a040 l     O .rodata	00000004              _ZL8SeekTime
+0805a044 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a048 l     O .rodata	00000004              _ZL11NetworkTime
+0805a04c l     O .rodata	00000004              _ZL10TimerTicks
+0804e375 l     F .text	0000001c              _GLOBAL__sub_I__ZN10StatisticsC2Ev
+00000000 l    df *ABS*	00000000              timer.cc
+08061af3 l     O .bss	00000001              _ZStL8__ioinit
+0804e493 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a0a8 l     O .rodata	00000001              _ZL6dbgAll
+0805a0a9 l     O .rodata	00000001              _ZL9dbgThread
+0805a0aa l     O .rodata	00000001              _ZL8dbgSynch
+0805a0ab l     O .rodata	00000001              _ZL6dbgInt
+0805a0ac l     O .rodata	00000001              _ZL7dbgMach
+0805a0ad l     O .rodata	00000001              _ZL7dbgDisk
+0805a0ae l     O .rodata	00000001              _ZL7dbgFile
+0805a0af l     O .rodata	00000001              _ZL7dbgAddr
+0805a0b0 l     O .rodata	00000001              _ZL6dbgNet
+0805a0b1 l     O .rodata	00000001              _ZL6dbJohn
+0805a0b4 l     O .rodata	00000004              _ZL8PageSize
+0805a0b8 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a0bc l     O .rodata	00000004              _ZL10MemorySize
+0805a0c0 l     O .rodata	00000004              _ZL7TLBSize
+0805a0c4 l     O .rodata	00000004              _ZL9StackSize
+0805a0c8 l     O .rodata	00000004              _ZL8UserTick
+0805a0cc l     O .rodata	00000004              _ZL10SystemTick
+0805a0d0 l     O .rodata	00000004              _ZL12RotationTime
+0805a0d4 l     O .rodata	00000004              _ZL8SeekTime
+0805a0d8 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a0dc l     O .rodata	00000004              _ZL11NetworkTime
+0805a0e0 l     O .rodata	00000004              _ZL10TimerTicks
+0805a0e4 l     O .rodata	00000004              _ZL10SectorSize
+0805a0e8 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a0ec l     O .rodata	00000004              _ZL9NumTracks
+0805a0f0 l     O .rodata	00000004              _ZL10NumSectors
+0804e4d2 l     F .text	0000001c              _GLOBAL__sub_I__ZN5TimerC2EbP11CallBackObj
+00000000 l    df *ABS*	00000000              alarm.cc
+08061af4 l     O .bss	00000001              _ZStL8__ioinit
+0804e65e l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a120 l     O .rodata	00000001              _ZL6dbgAll
+0805a121 l     O .rodata	00000001              _ZL9dbgThread
+0805a122 l     O .rodata	00000001              _ZL8dbgSynch
+0805a123 l     O .rodata	00000001              _ZL6dbgInt
+0805a124 l     O .rodata	00000001              _ZL7dbgMach
+0805a125 l     O .rodata	00000001              _ZL7dbgDisk
+0805a126 l     O .rodata	00000001              _ZL7dbgFile
+0805a127 l     O .rodata	00000001              _ZL7dbgAddr
+0805a128 l     O .rodata	00000001              _ZL6dbgNet
+0805a129 l     O .rodata	00000001              _ZL6dbJohn
+0805a12c l     O .rodata	00000004              _ZL8PageSize
+0805a130 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a134 l     O .rodata	00000004              _ZL10MemorySize
+0805a138 l     O .rodata	00000004              _ZL7TLBSize
+0805a13c l     O .rodata	00000004              _ZL9StackSize
+0805a140 l     O .rodata	00000004              _ZL8UserTick
+0805a144 l     O .rodata	00000004              _ZL10SystemTick
+0805a148 l     O .rodata	00000004              _ZL12RotationTime
+0805a14c l     O .rodata	00000004              _ZL8SeekTime
+0805a150 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a154 l     O .rodata	00000004              _ZL11NetworkTime
+0805a158 l     O .rodata	00000004              _ZL10TimerTicks
+0805a15c l     O .rodata	00000004              _ZL10SectorSize
+0805a160 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a164 l     O .rodata	00000004              _ZL9NumTracks
+0805a168 l     O .rodata	00000004              _ZL10NumSectors
+0804e69d l     F .text	0000001c              _GLOBAL__sub_I__ZN5AlarmC2Eb
+00000000 l    df *ABS*	00000000              kernel.cc
+08061af5 l     O .bss	00000001              _ZStL8__ioinit
+0804eb48 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a224 l     O .rodata	00000001              _ZL6dbgAll
+0805a225 l     O .rodata	00000001              _ZL9dbgThread
+0805a226 l     O .rodata	00000001              _ZL8dbgSynch
+0805a227 l     O .rodata	00000001              _ZL6dbgInt
+0805a228 l     O .rodata	00000001              _ZL7dbgMach
+0805a229 l     O .rodata	00000001              _ZL7dbgDisk
+0805a22a l     O .rodata	00000001              _ZL7dbgFile
+0805a22b l     O .rodata	00000001              _ZL7dbgAddr
+0805a22c l     O .rodata	00000001              _ZL6dbgNet
+0805a22d l     O .rodata	00000001              _ZL6dbJohn
+0805a230 l     O .rodata	00000004              _ZL8PageSize
+0805a234 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a238 l     O .rodata	00000004              _ZL10MemorySize
+0805a23c l     O .rodata	00000004              _ZL7TLBSize
+0805a240 l     O .rodata	00000004              _ZL9StackSize
+0805a244 l     O .rodata	00000004              _ZL8UserTick
+0805a248 l     O .rodata	00000004              _ZL10SystemTick
+0805a24c l     O .rodata	00000004              _ZL12RotationTime
+0805a250 l     O .rodata	00000004              _ZL8SeekTime
+0805a254 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a258 l     O .rodata	00000004              _ZL11NetworkTime
+0805a25c l     O .rodata	00000004              _ZL10TimerTicks
+0805a260 l     O .rodata	00000004              _ZL10SectorSize
+0805a264 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a268 l     O .rodata	00000004              _ZL9NumTracks
+0805a26c l     O .rodata	00000004              _ZL10NumSectors
+0804eb87 l     F .text	0000001c              _GLOBAL__sub_I__ZN14ThreadedKernelC2EiPPc
+00000000 l    df *ABS*	00000000              main.cc
+08061160 l     O .data	00000004              _ZL9copyright
+08061b00 l     O .bss	00000001              _ZStL8__ioinit
+0804ef88 l     F .text	0000005a              _ZL7Cleanupi
+0804f231 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a35f l     O .rodata	00000001              _ZL6dbgAll
+0805a360 l     O .rodata	00000001              _ZL9dbgThread
+0805a361 l     O .rodata	00000001              _ZL8dbgSynch
+0805a362 l     O .rodata	00000001              _ZL6dbgInt
+0805a363 l     O .rodata	00000001              _ZL7dbgMach
+0805a364 l     O .rodata	00000001              _ZL7dbgDisk
+0805a365 l     O .rodata	00000001              _ZL7dbgFile
+0805a366 l     O .rodata	00000001              _ZL7dbgAddr
+0805a367 l     O .rodata	00000001              _ZL6dbgNet
+0805a368 l     O .rodata	00000001              _ZL6dbJohn
+0805a36c l     O .rodata	00000004              _ZL8PageSize
+0805a370 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a374 l     O .rodata	00000004              _ZL10MemorySize
+0805a378 l     O .rodata	00000004              _ZL7TLBSize
+0805a37c l     O .rodata	00000004              _ZL9StackSize
+0805a380 l     O .rodata	00000004              _ZL8UserTick
+0805a384 l     O .rodata	00000004              _ZL10SystemTick
+0805a388 l     O .rodata	00000004              _ZL12RotationTime
+0805a38c l     O .rodata	00000004              _ZL8SeekTime
+0805a390 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a394 l     O .rodata	00000004              _ZL11NetworkTime
+0805a398 l     O .rodata	00000004              _ZL10TimerTicks
+0805a39c l     O .rodata	00000004              _ZL10SectorSize
+0805a3a0 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a3a4 l     O .rodata	00000004              _ZL9NumTracks
+0805a3a8 l     O .rodata	00000004              _ZL10NumSectors
+0804f270 l     F .text	0000001c              _GLOBAL__sub_I_kernel
+00000000 l    df *ABS*	00000000              scheduler.cc
+08061b01 l     O .bss	00000001              _ZStL8__ioinit
+0804f7ec l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a453 l     O .rodata	00000001              _ZL6dbgAll
+0805a454 l     O .rodata	00000001              _ZL9dbgThread
+0805a455 l     O .rodata	00000001              _ZL8dbgSynch
+0805a456 l     O .rodata	00000001              _ZL6dbgInt
+0805a457 l     O .rodata	00000001              _ZL7dbgMach
+0805a458 l     O .rodata	00000001              _ZL7dbgDisk
+0805a459 l     O .rodata	00000001              _ZL7dbgFile
+0805a45a l     O .rodata	00000001              _ZL7dbgAddr
+0805a45b l     O .rodata	00000001              _ZL6dbgNet
+0805a45c l     O .rodata	00000001              _ZL6dbJohn
+0805a460 l     O .rodata	00000004              _ZL8PageSize
+0805a464 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a468 l     O .rodata	00000004              _ZL10MemorySize
+0805a46c l     O .rodata	00000004              _ZL7TLBSize
+0805a470 l     O .rodata	00000004              _ZL9StackSize
+0805a474 l     O .rodata	00000004              _ZL8UserTick
+0805a478 l     O .rodata	00000004              _ZL10SystemTick
+0805a47c l     O .rodata	00000004              _ZL12RotationTime
+0805a480 l     O .rodata	00000004              _ZL8SeekTime
+0805a484 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a488 l     O .rodata	00000004              _ZL11NetworkTime
+0805a48c l     O .rodata	00000004              _ZL10TimerTicks
+0805a490 l     O .rodata	00000004              _ZL10SectorSize
+0805a494 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a498 l     O .rodata	00000004              _ZL9NumTracks
+0805a49c l     O .rodata	00000004              _ZL10NumSectors
+0804f82b l     F .text	0000001c              _GLOBAL__sub_I__ZN9SchedulerC2Ev
+00000000 l    df *ABS*	00000000              synch.cc
+08061b04 l     O .bss	00000001              _ZStL8__ioinit
+08061b08 l     O .bss	00000004              _ZL4ping
+08050136 l     F .text	00000033              _ZL14SelfTestHelperP9Semaphore
+08050653 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a52c l     O .rodata	00000004              _ZL8PageSize
+0805a530 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a534 l     O .rodata	00000004              _ZL10MemorySize
+0805a538 l     O .rodata	00000004              _ZL7TLBSize
+0805a53c l     O .rodata	00000004              _ZL9StackSize
+0805a540 l     O .rodata	00000001              _ZL6dbgAll
+0805a541 l     O .rodata	00000001              _ZL9dbgThread
+0805a542 l     O .rodata	00000001              _ZL8dbgSynch
+0805a543 l     O .rodata	00000001              _ZL6dbgInt
+0805a544 l     O .rodata	00000001              _ZL7dbgMach
+0805a545 l     O .rodata	00000001              _ZL7dbgDisk
+0805a546 l     O .rodata	00000001              _ZL7dbgFile
+0805a547 l     O .rodata	00000001              _ZL7dbgAddr
+0805a548 l     O .rodata	00000001              _ZL6dbgNet
+0805a549 l     O .rodata	00000001              _ZL6dbJohn
+0805a54c l     O .rodata	00000004              _ZL8UserTick
+0805a550 l     O .rodata	00000004              _ZL10SystemTick
+0805a554 l     O .rodata	00000004              _ZL12RotationTime
+0805a558 l     O .rodata	00000004              _ZL8SeekTime
+0805a55c l     O .rodata	00000004              _ZL11ConsoleTime
+0805a560 l     O .rodata	00000004              _ZL11NetworkTime
+0805a564 l     O .rodata	00000004              _ZL10TimerTicks
+0805a568 l     O .rodata	00000004              _ZL10SectorSize
+0805a56c l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a570 l     O .rodata	00000004              _ZL9NumTracks
+0805a574 l     O .rodata	00000004              _ZL10NumSectors
+08050692 l     F .text	0000001c              _GLOBAL__sub_I__ZN9SemaphoreC2EPci
+00000000 l    df *ABS*	00000000              thread.cc
+08061b0c l     O .bss	00000001              _ZStL8__ioinit
+08051571 l     F .text	00000017              _ZL12ThreadFinishv
+08051588 l     F .text	00000017              _ZL11ThreadBeginv
+080516bf l     F .text	0000007c              _ZL12SimpleThreadi
+080517d1 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a6a4 l     O .rodata	00000004              _ZL8PageSize
+0805a6a8 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a6ac l     O .rodata	00000004              _ZL10MemorySize
+0805a6b0 l     O .rodata	00000004              _ZL7TLBSize
+0805a6b4 l     O .rodata	00000004              _ZL9StackSize
+0805a6b8 l     O .rodata	00000001              _ZL6dbgAll
+0805a6b9 l     O .rodata	00000001              _ZL9dbgThread
+0805a6ba l     O .rodata	00000001              _ZL8dbgSynch
+0805a6bb l     O .rodata	00000001              _ZL6dbgInt
+0805a6bc l     O .rodata	00000001              _ZL7dbgMach
+0805a6bd l     O .rodata	00000001              _ZL7dbgDisk
+0805a6be l     O .rodata	00000001              _ZL7dbgFile
+0805a6bf l     O .rodata	00000001              _ZL7dbgAddr
+0805a6c0 l     O .rodata	00000001              _ZL6dbgNet
+0805a6c1 l     O .rodata	00000001              _ZL6dbJohn
+0805a6c4 l     O .rodata	00000004              _ZL8UserTick
+0805a6c8 l     O .rodata	00000004              _ZL10SystemTick
+0805a6cc l     O .rodata	00000004              _ZL12RotationTime
+0805a6d0 l     O .rodata	00000004              _ZL8SeekTime
+0805a6d4 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a6d8 l     O .rodata	00000004              _ZL11NetworkTime
+0805a6dc l     O .rodata	00000004              _ZL10TimerTicks
+0805a6e0 l     O .rodata	00000004              _ZL10SectorSize
+0805a6e4 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a6e8 l     O .rodata	00000004              _ZL9NumTracks
+0805a6ec l     O .rodata	00000004              _ZL10NumSectors
+0805a6f0 l     O .rodata	00000004              _ZL15STACK_FENCEPOST
+08051810 l     F .text	0000001c              _GLOBAL__sub_I__ZN6ThreadC2EPc
+00000000 l    df *ABS*	00000000              elevator.cc
+08061b0d l     O .bss	00000001              _ZStL8__ioinit
+080524f6 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a73b l     O .rodata	00000001              _ZL6dbgAll
+0805a73c l     O .rodata	00000001              _ZL9dbgThread
+0805a73d l     O .rodata	00000001              _ZL8dbgSynch
+0805a73e l     O .rodata	00000001              _ZL6dbgInt
+0805a73f l     O .rodata	00000001              _ZL7dbgMach
+0805a740 l     O .rodata	00000001              _ZL7dbgDisk
+0805a741 l     O .rodata	00000001              _ZL7dbgFile
+0805a742 l     O .rodata	00000001              _ZL7dbgAddr
+0805a743 l     O .rodata	00000001              _ZL6dbgNet
+0805a744 l     O .rodata	00000001              _ZL6dbJohn
+0805a748 l     O .rodata	00000004              _ZL9MaxRiders
+0805a74c l     O .rodata	00000004              _ZL13DelayPerFloor
+0805a750 l     O .rodata	00000004              _ZL8PageSize
+0805a754 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a758 l     O .rodata	00000004              _ZL10MemorySize
+0805a75c l     O .rodata	00000004              _ZL7TLBSize
+0805a760 l     O .rodata	00000004              _ZL9StackSize
+0805a764 l     O .rodata	00000004              _ZL8UserTick
+0805a768 l     O .rodata	00000004              _ZL10SystemTick
+0805a76c l     O .rodata	00000004              _ZL12RotationTime
+0805a770 l     O .rodata	00000004              _ZL8SeekTime
+0805a774 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a778 l     O .rodata	00000004              _ZL11NetworkTime
+0805a77c l     O .rodata	00000004              _ZL10TimerTicks
+0805a780 l     O .rodata	00000004              _ZL10SectorSize
+0805a784 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a788 l     O .rodata	00000004              _ZL9NumTracks
+0805a78c l     O .rodata	00000004              _ZL10NumSectors
+08052535 l     F .text	0000001c              _GLOBAL__sub_I__ZN12ElevatorBankC2EiiP11CallBackObjS1_
+00000000 l    df *ABS*	00000000              elevatortest.cc
+08061b0e l     O .bss	00000001              _ZStL8__ioinit
+0805339c l     F .text	00000013              _ZL14ControllerTestP17ElevatorInspector
+08053b86 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a855 l     O .rodata	00000001              _ZL6dbgAll
+0805a856 l     O .rodata	00000001              _ZL9dbgThread
+0805a857 l     O .rodata	00000001              _ZL8dbgSynch
+0805a858 l     O .rodata	00000001              _ZL6dbgInt
+0805a859 l     O .rodata	00000001              _ZL7dbgMach
+0805a85a l     O .rodata	00000001              _ZL7dbgDisk
+0805a85b l     O .rodata	00000001              _ZL7dbgFile
+0805a85c l     O .rodata	00000001              _ZL7dbgAddr
+0805a85d l     O .rodata	00000001              _ZL6dbgNet
+0805a85e l     O .rodata	00000001              _ZL6dbJohn
+0805a860 l     O .rodata	00000004              _ZL9MaxRiders
+0805a864 l     O .rodata	00000004              _ZL13DelayPerFloor
+0805a868 l     O .rodata	00000004              _ZL8PageSize
+0805a86c l     O .rodata	00000004              _ZL12NumPhysPages
+0805a870 l     O .rodata	00000004              _ZL10MemorySize
+0805a874 l     O .rodata	00000004              _ZL7TLBSize
+0805a878 l     O .rodata	00000004              _ZL9StackSize
+0805a87c l     O .rodata	00000004              _ZL8UserTick
+0805a880 l     O .rodata	00000004              _ZL10SystemTick
+0805a884 l     O .rodata	00000004              _ZL12RotationTime
+0805a888 l     O .rodata	00000004              _ZL8SeekTime
+0805a88c l     O .rodata	00000004              _ZL11ConsoleTime
+0805a890 l     O .rodata	00000004              _ZL11NetworkTime
+0805a894 l     O .rodata	00000004              _ZL10TimerTicks
+0805a898 l     O .rodata	00000004              _ZL10SectorSize
+0805a89c l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a8a0 l     O .rodata	00000004              _ZL9NumTracks
+0805a8a4 l     O .rodata	00000004              _ZL10NumSectors
+08053bc5 l     F .text	0000001c              _GLOBAL__sub_I__Z16ElevatorSelfTestv
+00000000 l    df *ABS*	00000000              addrspace.cc
+08061b0f l     O .bss	00000001              _ZStL8__ioinit
+08053cc6 l     F .text	000000e2              _ZL10SwapHeaderP10noffHeader
+08054492 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805a9b5 l     O .rodata	00000001              _ZL6dbgAll
+0805a9b6 l     O .rodata	00000001              _ZL9dbgThread
+0805a9b7 l     O .rodata	00000001              _ZL8dbgSynch
+0805a9b8 l     O .rodata	00000001              _ZL6dbgInt
+0805a9b9 l     O .rodata	00000001              _ZL7dbgMach
+0805a9ba l     O .rodata	00000001              _ZL7dbgDisk
+0805a9bb l     O .rodata	00000001              _ZL7dbgFile
+0805a9bc l     O .rodata	00000001              _ZL7dbgAddr
+0805a9bd l     O .rodata	00000001              _ZL6dbgNet
+0805a9be l     O .rodata	00000001              _ZL6dbJohn
+0805a9c0 l     O .rodata	00000004              _ZL8PageSize
+0805a9c4 l     O .rodata	00000004              _ZL12NumPhysPages
+0805a9c8 l     O .rodata	00000004              _ZL10MemorySize
+0805a9cc l     O .rodata	00000004              _ZL7TLBSize
+0805a9d0 l     O .rodata	00000004              _ZL9StackSize
+0805a9d4 l     O .rodata	00000004              _ZL8UserTick
+0805a9d8 l     O .rodata	00000004              _ZL10SystemTick
+0805a9dc l     O .rodata	00000004              _ZL12RotationTime
+0805a9e0 l     O .rodata	00000004              _ZL8SeekTime
+0805a9e4 l     O .rodata	00000004              _ZL11ConsoleTime
+0805a9e8 l     O .rodata	00000004              _ZL11NetworkTime
+0805a9ec l     O .rodata	00000004              _ZL10TimerTicks
+0805a9f0 l     O .rodata	00000004              _ZL10SectorSize
+0805a9f4 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805a9f8 l     O .rodata	00000004              _ZL9NumTracks
+0805a9fc l     O .rodata	00000004              _ZL10NumSectors
+080544d1 l     F .text	0000001c              _GLOBAL__sub_I__ZN9AddrSpaceC2Ev
+00000000 l    df *ABS*	00000000              exception.cc
+08061b10 l     O .bss	00000001              _ZStL8__ioinit
+08054a13 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805aac7 l     O .rodata	00000001              _ZL6dbgAll
+0805aac8 l     O .rodata	00000001              _ZL9dbgThread
+0805aac9 l     O .rodata	00000001              _ZL8dbgSynch
+0805aaca l     O .rodata	00000001              _ZL6dbgInt
+0805aacb l     O .rodata	00000001              _ZL7dbgMach
+0805aacc l     O .rodata	00000001              _ZL7dbgDisk
+0805aacd l     O .rodata	00000001              _ZL7dbgFile
+0805aace l     O .rodata	00000001              _ZL7dbgAddr
+0805aacf l     O .rodata	00000001              _ZL6dbgNet
+0805aad0 l     O .rodata	00000001              _ZL6dbJohn
+0805aad4 l     O .rodata	00000004              _ZL8PageSize
+0805aad8 l     O .rodata	00000004              _ZL12NumPhysPages
+0805aadc l     O .rodata	00000004              _ZL10MemorySize
+0805aae0 l     O .rodata	00000004              _ZL7TLBSize
+0805aae4 l     O .rodata	00000004              _ZL9StackSize
+0805aae8 l     O .rodata	00000004              _ZL8UserTick
+0805aaec l     O .rodata	00000004              _ZL10SystemTick
+0805aaf0 l     O .rodata	00000004              _ZL12RotationTime
+0805aaf4 l     O .rodata	00000004              _ZL8SeekTime
+0805aaf8 l     O .rodata	00000004              _ZL11ConsoleTime
+0805aafc l     O .rodata	00000004              _ZL11NetworkTime
+0805ab00 l     O .rodata	00000004              _ZL10TimerTicks
+0805ab04 l     O .rodata	00000004              _ZL10SectorSize
+0805ab08 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805ab0c l     O .rodata	00000004              _ZL9NumTracks
+0805ab10 l     O .rodata	00000004              _ZL10NumSectors
+08054a52 l     F .text	0000001c              _GLOBAL__sub_I__Z8sysOSAddii
+00000000 l    df *ABS*	00000000              synchconsole.cc
+08061b11 l     O .bss	00000001              _ZStL8__ioinit
+08054e80 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805ab2c l     O .rodata	00000004              _ZL8PageSize
+0805ab30 l     O .rodata	00000004              _ZL12NumPhysPages
+0805ab34 l     O .rodata	00000004              _ZL10MemorySize
+0805ab38 l     O .rodata	00000004              _ZL7TLBSize
+0805ab3c l     O .rodata	00000004              _ZL9StackSize
+0805ab40 l     O .rodata	00000001              _ZL6dbgAll
+0805ab41 l     O .rodata	00000001              _ZL9dbgThread
+0805ab42 l     O .rodata	00000001              _ZL8dbgSynch
+0805ab43 l     O .rodata	00000001              _ZL6dbgInt
+0805ab44 l     O .rodata	00000001              _ZL7dbgMach
+0805ab45 l     O .rodata	00000001              _ZL7dbgDisk
+0805ab46 l     O .rodata	00000001              _ZL7dbgFile
+0805ab47 l     O .rodata	00000001              _ZL7dbgAddr
+0805ab48 l     O .rodata	00000001              _ZL6dbgNet
+0805ab49 l     O .rodata	00000001              _ZL6dbJohn
+0805ab4c l     O .rodata	00000004              _ZL8UserTick
+0805ab50 l     O .rodata	00000004              _ZL10SystemTick
+0805ab54 l     O .rodata	00000004              _ZL12RotationTime
+0805ab58 l     O .rodata	00000004              _ZL8SeekTime
+0805ab5c l     O .rodata	00000004              _ZL11ConsoleTime
+0805ab60 l     O .rodata	00000004              _ZL11NetworkTime
+0805ab64 l     O .rodata	00000004              _ZL10TimerTicks
+0805ab68 l     O .rodata	00000004              _ZL10SectorSize
+0805ab6c l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805ab70 l     O .rodata	00000004              _ZL9NumTracks
+0805ab74 l     O .rodata	00000004              _ZL10NumSectors
+08054ebf l     F .text	0000001c              _GLOBAL__sub_I__ZN17SynchConsoleInputC2EPc
+00000000 l    df *ABS*	00000000              console.cc
+08061b12 l     O .bss	00000001              _ZStL8__ioinit
+0805532e l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805ac1f l     O .rodata	00000001              _ZL6dbgAll
+0805ac20 l     O .rodata	00000001              _ZL9dbgThread
+0805ac21 l     O .rodata	00000001              _ZL8dbgSynch
+0805ac22 l     O .rodata	00000001              _ZL6dbgInt
+0805ac23 l     O .rodata	00000001              _ZL7dbgMach
+0805ac24 l     O .rodata	00000001              _ZL7dbgDisk
+0805ac25 l     O .rodata	00000001              _ZL7dbgFile
+0805ac26 l     O .rodata	00000001              _ZL7dbgAddr
+0805ac27 l     O .rodata	00000001              _ZL6dbgNet
+0805ac28 l     O .rodata	00000001              _ZL6dbJohn
+0805ac2c l     O .rodata	00000004              _ZL8PageSize
+0805ac30 l     O .rodata	00000004              _ZL12NumPhysPages
+0805ac34 l     O .rodata	00000004              _ZL10MemorySize
+0805ac38 l     O .rodata	00000004              _ZL7TLBSize
+0805ac3c l     O .rodata	00000004              _ZL9StackSize
+0805ac40 l     O .rodata	00000004              _ZL8UserTick
+0805ac44 l     O .rodata	00000004              _ZL10SystemTick
+0805ac48 l     O .rodata	00000004              _ZL12RotationTime
+0805ac4c l     O .rodata	00000004              _ZL8SeekTime
+0805ac50 l     O .rodata	00000004              _ZL11ConsoleTime
+0805ac54 l     O .rodata	00000004              _ZL11NetworkTime
+0805ac58 l     O .rodata	00000004              _ZL10TimerTicks
+0805ac5c l     O .rodata	00000004              _ZL10SectorSize
+0805ac60 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805ac64 l     O .rodata	00000004              _ZL9NumTracks
+0805ac68 l     O .rodata	00000004              _ZL10NumSectors
+0805536d l     F .text	0000001c              _GLOBAL__sub_I__ZN12ConsoleInputC2EPcP11CallBackObj
+00000000 l    df *ABS*	00000000              machine.cc
+08061b13 l     O .bss	00000001              _ZStL8__ioinit
+08061180 l     O .data	00000020              _ZL14exceptionNames
+0805538a l     F .text	00000097              _ZL11CheckEndianv
+08055a96 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805ae9c l     O .rodata	00000004              _ZL8PageSize
+0805aea0 l     O .rodata	00000004              _ZL12NumPhysPages
+0805aea4 l     O .rodata	00000004              _ZL10MemorySize
+0805aea8 l     O .rodata	00000004              _ZL7TLBSize
+0805aeac l     O .rodata	00000001              _ZL6dbgAll
+0805aead l     O .rodata	00000001              _ZL9dbgThread
+0805aeae l     O .rodata	00000001              _ZL8dbgSynch
+0805aeaf l     O .rodata	00000001              _ZL6dbgInt
+0805aeb0 l     O .rodata	00000001              _ZL7dbgMach
+0805aeb1 l     O .rodata	00000001              _ZL7dbgDisk
+0805aeb2 l     O .rodata	00000001              _ZL7dbgFile
+0805aeb3 l     O .rodata	00000001              _ZL7dbgAddr
+0805aeb4 l     O .rodata	00000001              _ZL6dbgNet
+0805aeb5 l     O .rodata	00000001              _ZL6dbJohn
+0805aeb8 l     O .rodata	00000004              _ZL9StackSize
+0805aebc l     O .rodata	00000004              _ZL8UserTick
+0805aec0 l     O .rodata	00000004              _ZL10SystemTick
+0805aec4 l     O .rodata	00000004              _ZL12RotationTime
+0805aec8 l     O .rodata	00000004              _ZL8SeekTime
+0805aecc l     O .rodata	00000004              _ZL11ConsoleTime
+0805aed0 l     O .rodata	00000004              _ZL11NetworkTime
+0805aed4 l     O .rodata	00000004              _ZL10TimerTicks
+0805aed8 l     O .rodata	00000004              _ZL10SectorSize
+0805aedc l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805aee0 l     O .rodata	00000004              _ZL9NumTracks
+0805aee4 l     O .rodata	00000004              _ZL10NumSectors
+08055ad5 l     F .text	0000001c              _GLOBAL__sub_I__ZN7MachineC2Eb
+00000000 l    df *ABS*	00000000              mipssim.cc
+08061b14 l     O .bss	00000001              _ZStL8__ioinit
+080611a0 l     O .data	00000200              _ZL7opTable
+080613a0 l     O .data	00000100              _ZL12specialTable
+080614a0 l     O .data	00000400              _ZL9opStrings
+08055c06 l     F .text	00000056              _ZL9TypeToReg7RegTypeP11Instruction
+08057b1e l     F .text	000000f0              _ZL4MultiibPiS_
+08057c0e l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805b3bc l     O .rodata	00000001              _ZL6dbgAll
+0805b3bd l     O .rodata	00000001              _ZL9dbgThread
+0805b3be l     O .rodata	00000001              _ZL8dbgSynch
+0805b3bf l     O .rodata	00000001              _ZL6dbgInt
+0805b3c0 l     O .rodata	00000001              _ZL7dbgMach
+0805b3c1 l     O .rodata	00000001              _ZL7dbgDisk
+0805b3c2 l     O .rodata	00000001              _ZL7dbgFile
+0805b3c3 l     O .rodata	00000001              _ZL7dbgAddr
+0805b3c4 l     O .rodata	00000001              _ZL6dbgNet
+0805b3c5 l     O .rodata	00000001              _ZL6dbJohn
+0805b3c8 l     O .rodata	00000004              _ZL8PageSize
+0805b3cc l     O .rodata	00000004              _ZL12NumPhysPages
+0805b3d0 l     O .rodata	00000004              _ZL10MemorySize
+0805b3d4 l     O .rodata	00000004              _ZL7TLBSize
+0805b3d8 l     O .rodata	00000004              _ZL9StackSize
+0805b3dc l     O .rodata	00000004              _ZL8UserTick
+0805b3e0 l     O .rodata	00000004              _ZL10SystemTick
+0805b3e4 l     O .rodata	00000004              _ZL12RotationTime
+0805b3e8 l     O .rodata	00000004              _ZL8SeekTime
+0805b3ec l     O .rodata	00000004              _ZL11ConsoleTime
+0805b3f0 l     O .rodata	00000004              _ZL11NetworkTime
+0805b3f4 l     O .rodata	00000004              _ZL10TimerTicks
+0805b3f8 l     O .rodata	00000004              _ZL10SectorSize
+0805b3fc l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805b400 l     O .rodata	00000004              _ZL9NumTracks
+0805b404 l     O .rodata	00000004              _ZL10NumSectors
+08057c4d l     F .text	0000001c              _GLOBAL__sub_I__ZN7Machine3RunEv
+00000000 l    df *ABS*	00000000              translate.cc
+08061b15 l     O .bss	00000001              _ZStL8__ioinit
+080585e9 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805b541 l     O .rodata	00000001              _ZL6dbgAll
+0805b542 l     O .rodata	00000001              _ZL9dbgThread
+0805b543 l     O .rodata	00000001              _ZL8dbgSynch
+0805b544 l     O .rodata	00000001              _ZL6dbgInt
+0805b545 l     O .rodata	00000001              _ZL7dbgMach
+0805b546 l     O .rodata	00000001              _ZL7dbgDisk
+0805b547 l     O .rodata	00000001              _ZL7dbgFile
+0805b548 l     O .rodata	00000001              _ZL7dbgAddr
+0805b549 l     O .rodata	00000001              _ZL6dbgNet
+0805b54a l     O .rodata	00000001              _ZL6dbJohn
+0805b54c l     O .rodata	00000004              _ZL8PageSize
+0805b550 l     O .rodata	00000004              _ZL12NumPhysPages
+0805b554 l     O .rodata	00000004              _ZL10MemorySize
+0805b558 l     O .rodata	00000004              _ZL7TLBSize
+0805b55c l     O .rodata	00000004              _ZL9StackSize
+0805b560 l     O .rodata	00000004              _ZL8UserTick
+0805b564 l     O .rodata	00000004              _ZL10SystemTick
+0805b568 l     O .rodata	00000004              _ZL12RotationTime
+0805b56c l     O .rodata	00000004              _ZL8SeekTime
+0805b570 l     O .rodata	00000004              _ZL11ConsoleTime
+0805b574 l     O .rodata	00000004              _ZL11NetworkTime
+0805b578 l     O .rodata	00000004              _ZL10TimerTicks
+0805b57c l     O .rodata	00000004              _ZL10SectorSize
+0805b580 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805b584 l     O .rodata	00000004              _ZL9NumTracks
+0805b588 l     O .rodata	00000004              _ZL10NumSectors
+08058628 l     F .text	0000001c              _GLOBAL__sub_I__Z10WordToHostj
+00000000 l    df *ABS*	00000000              userkernel.cc
+08061b16 l     O .bss	00000001              _ZStL8__ioinit
+08058b65 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805b784 l     O .rodata	00000004              _ZL8PageSize
+0805b788 l     O .rodata	00000004              _ZL12NumPhysPages
+0805b78c l     O .rodata	00000004              _ZL10MemorySize
+0805b790 l     O .rodata	00000004              _ZL7TLBSize
+0805b794 l     O .rodata	00000004              _ZL9StackSize
+0805b798 l     O .rodata	00000001              _ZL6dbgAll
+0805b799 l     O .rodata	00000001              _ZL9dbgThread
+0805b79a l     O .rodata	00000001              _ZL8dbgSynch
+0805b79b l     O .rodata	00000001              _ZL6dbgInt
+0805b79c l     O .rodata	00000001              _ZL7dbgMach
+0805b79d l     O .rodata	00000001              _ZL7dbgDisk
+0805b79e l     O .rodata	00000001              _ZL7dbgFile
+0805b79f l     O .rodata	00000001              _ZL7dbgAddr
+0805b7a0 l     O .rodata	00000001              _ZL6dbgNet
+0805b7a1 l     O .rodata	00000001              _ZL6dbJohn
+0805b7a4 l     O .rodata	00000004              _ZL8UserTick
+0805b7a8 l     O .rodata	00000004              _ZL10SystemTick
+0805b7ac l     O .rodata	00000004              _ZL12RotationTime
+0805b7b0 l     O .rodata	00000004              _ZL8SeekTime
+0805b7b4 l     O .rodata	00000004              _ZL11ConsoleTime
+0805b7b8 l     O .rodata	00000004              _ZL11NetworkTime
+0805b7bc l     O .rodata	00000004              _ZL10TimerTicks
+0805b7c0 l     O .rodata	00000004              _ZL10SectorSize
+0805b7c4 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805b7c8 l     O .rodata	00000004              _ZL9NumTracks
+0805b7cc l     O .rodata	00000004              _ZL10NumSectors
+08058ba4 l     F .text	0000001c              _GLOBAL__sub_I__ZN14UserProgKernelC2EiPPc
+00000000 l    df *ABS*	00000000              synchdisk.cc
+08061b17 l     O .bss	00000001              _ZStL8__ioinit
+08058e22 l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805b7ec l     O .rodata	00000004              _ZL10SectorSize
+0805b7f0 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805b7f4 l     O .rodata	00000004              _ZL9NumTracks
+0805b7f8 l     O .rodata	00000004              _ZL10NumSectors
+0805b7fc l     O .rodata	00000004              _ZL8PageSize
+0805b800 l     O .rodata	00000004              _ZL12NumPhysPages
+0805b804 l     O .rodata	00000004              _ZL10MemorySize
+0805b808 l     O .rodata	00000004              _ZL7TLBSize
+0805b80c l     O .rodata	00000004              _ZL9StackSize
+0805b810 l     O .rodata	00000001              _ZL6dbgAll
+0805b811 l     O .rodata	00000001              _ZL9dbgThread
+0805b812 l     O .rodata	00000001              _ZL8dbgSynch
+0805b813 l     O .rodata	00000001              _ZL6dbgInt
+0805b814 l     O .rodata	00000001              _ZL7dbgMach
+0805b815 l     O .rodata	00000001              _ZL7dbgDisk
+0805b816 l     O .rodata	00000001              _ZL7dbgFile
+0805b817 l     O .rodata	00000001              _ZL7dbgAddr
+0805b818 l     O .rodata	00000001              _ZL6dbgNet
+0805b819 l     O .rodata	00000001              _ZL6dbJohn
+0805b81c l     O .rodata	00000004              _ZL8UserTick
+0805b820 l     O .rodata	00000004              _ZL10SystemTick
+0805b824 l     O .rodata	00000004              _ZL12RotationTime
+0805b828 l     O .rodata	00000004              _ZL8SeekTime
+0805b82c l     O .rodata	00000004              _ZL11ConsoleTime
+0805b830 l     O .rodata	00000004              _ZL11NetworkTime
+0805b834 l     O .rodata	00000004              _ZL10TimerTicks
+08058e61 l     F .text	0000001c              _GLOBAL__sub_I__ZN9SynchDiskC2EPc
+00000000 l    df *ABS*	00000000              disk.cc
+08061b18 l     O .bss	00000001              _ZStL8__ioinit
+080590be l     F .text	000000de              _ZL11PrintSectorbiPc
+0805993a l     F .text	0000003f              _Z41__static_initialization_and_destruction_0ii
+0805b92c l     O .rodata	00000004              _ZL10SectorSize
+0805b930 l     O .rodata	00000004              _ZL15SectorsPerTrack
+0805b934 l     O .rodata	00000004              _ZL9NumTracks
+0805b938 l     O .rodata	00000004              _ZL10NumSectors
+0805b93c l     O .rodata	00000001              _ZL6dbgAll
+0805b93d l     O .rodata	00000001              _ZL9dbgThread
+0805b93e l     O .rodata	00000001              _ZL8dbgSynch
+0805b93f l     O .rodata	00000001              _ZL6dbgInt
+0805b940 l     O .rodata	00000001              _ZL7dbgMach
+0805b941 l     O .rodata	00000001              _ZL7dbgDisk
+0805b942 l     O .rodata	00000001              _ZL7dbgFile
+0805b943 l     O .rodata	00000001              _ZL7dbgAddr
+0805b944 l     O .rodata	00000001              _ZL6dbgNet
+0805b945 l     O .rodata	00000001              _ZL6dbJohn
+0805b948 l     O .rodata	00000004              _ZL8PageSize
+0805b94c l     O .rodata	00000004              _ZL12NumPhysPages
+0805b950 l     O .rodata	00000004              _ZL10MemorySize
+0805b954 l     O .rodata	00000004              _ZL7TLBSize
+0805b958 l     O .rodata	00000004              _ZL9StackSize
+0805b95c l     O .rodata	00000004              _ZL8UserTick
+0805b960 l     O .rodata	00000004              _ZL10SystemTick
+0805b964 l     O .rodata	00000004              _ZL12RotationTime
+0805b968 l     O .rodata	00000004              _ZL8SeekTime
+0805b96c l     O .rodata	00000004              _ZL11ConsoleTime
+0805b970 l     O .rodata	00000004              _ZL11NetworkTime
+0805b974 l     O .rodata	00000004              _ZL10TimerTicks
+0805b978 l     O .rodata	00000004              _ZL11MagicNumber
+0805b97c l     O .rodata	00000004              _ZL9MagicSize
+0805b980 l     O .rodata	00000004              _ZL8DiskSize
+08059979 l     F .text	0000001c              _GLOBAL__sub_I__ZN4DiskC2EPcP11CallBackObj
+00000000 l    df *ABS*	00000000              crtstuff.c
+0805fcc0 l     O .eh_frame	00000000              __FRAME_END__
+08060f00 l     O .jcr	00000000              __JCR_END__
+00000000 l    df *ABS*	00000000              
+08061000 l     O .got.plt	00000000              _GLOBAL_OFFSET_TABLE_
+08060efc l       .init_array	00000000              __init_array_end
+08060e94 l       .init_array	00000000              __init_array_start
+08060f04 l     O .dynamic	00000000              _DYNAMIC
+080610c0  w      .data	00000000              data_start
+080618a0 g     O .bss	00000090              _ZSt3cin@@GLIBCXX_3.4
+00000000       F *UND*	00000000              abort@@GLIBC_2.0
+0805a08f  w    O .rodata	0000000e              _ZTS11CallBackObj
+0805455c  w    F .text	0000004f              _ZN10FileSystem4OpenEPc
+08059f20  w    O .rodata	0000001c              _ZTV4ListIP16PendingInterruptE
+0804b486  w    F .text	00000020              _ZN12HashIteratorIiPcED2Ev
+08048f62 g     F .text	00000016              _ZN6BitMapD1Ev
+08057c98 g     F .text	0000001b              _Z14ShortToMachinet
+0804e760  w    F .text	00000019              _ZN9Interrupt19AnyFutureInterruptsEv
+0804daa0  w    F .text	0000001a              _ZN10SortedListIP16PendingInterruptE7PrependES1_
+08050022 g     F .text	00000092              _ZN9Semaphore1PEv
+0804f848  w    F .text	0000000e              _ZN6Thread7getNameEv
+00000000       F *UND*	00000000              sprintf@@GLIBC_2.0
+0805abb0  w    O .rodata	00000015              _ZTS18SynchConsoleOutput
+0804c66b g     F .text	00000011              _Z4Exiti
+00000000       F *UND*	00000000              srand@@GLIBC_2.0
+00000000       F *UND*	00000000              open@@GLIBC_2.0
+08052412 g     F .text	00000058              _ZN12ElevatorBank12getNextEventEP4ListIP20PendingElevatorEventEPiS5_
+0805446c g     F .text	00000026              _ZN9AddrSpace12RestoreStateEv
+0805ac70  w    O .rodata	00000014              _ZTV13ConsoleOutput
+00000000       F *UND*	00000000              _ZNSolsEi@@GLIBCXX_3.4
+08053e6a g     F .text	00000015              _ZN9AddrSpaceD1Ev
+0804daba  w    F .text	0000001a              _ZN10SortedListIP16PendingInterruptE6AppendES1_
+0805268e  w    F .text	00000073              _ZN12ElevatorInfo10CloseDoorsEv
+0804b85e  w    F .text	00000010              _ZN12ListIteratorIPcEC1EP4ListIS0_E
+00000000       F *UND*	00000000              __cxa_atexit@@GLIBC_2.1.3
+08051958 g     F .text	000000dc              _ZN12ElevatorBankD1Ev
+0804c4aa  w    F .text	0000001a              _ZN10SortedListIiE7PrependEi
+0804dbaa  w    F .text	00000154              _ZN4ListIP16PendingInterruptE7PrependES1_
+08059a70 g     F .text	00000002              __libc_csu_fini
+08058e7e g     F .text	000001c5              _ZN4DiskC1EPcP11CallBackObj
+0804d0d4 g     F .text	00000136              _ZN9Interrupt8ScheduleEP11CallBackObji7IntType
+0804d746  w    F .text	000001f2              _ZN10SortedListIP16PendingInterruptE6InsertES1_
+0805163c g     F .text	0000003f              _ZN6Thread13SaveUserStateEv
+0805acc4  w    O .rodata	0000000f              _ZTS12ConsoleInput
+080506dc  w    F .text	0000008d              _ZN4ListIP9SemaphoreED1Ev
+0804cc94 g     F .text	00000093              _ZN9Interrupt11ChangeLevelE9IntStatusS0_
+0805182c  w    F .text	00000021              _ZN6Thread5PrintEv
+08048d40 g     F .text	00000000              _start
+08054446 g     F .text	00000026              _ZN9AddrSpace9SaveStateEv
+08050e38 g     F .text	000000f0              _ZN6ThreadD1Ev
+08052d34  w    F .text	0000001e              _ZN4ListIP20PendingElevatorEventED0Ev
+080509c2  w    F .text	00000017              _ZN11ListElementIP9SemaphoreEC1ES1_
+0805184e g     F .text	00000109              _ZN12ElevatorBankC2EiiP11CallBackObjS1_
+08058e7e g     F .text	000001c5              _ZN4DiskC2EPcP11CallBackObj
+0804f88e  w    F .text	0000008d              _ZN4ListIP6ThreadED2Ev
+0804ee80  w    F .text	00000013              _ZN9SynchListIiE17SelfTestHelper_stEPS0_
+0804fba4  w    F .text	00000017              _ZN11ListElementIP6ThreadEC1ES1_
+08058d70 g     F .text	0000004e              _ZN9SynchDisk10ReadSectorEiPc
+0804bc1e  w    F .text	000000f8              _ZN9HashTableIiPcE6ReHashEv
+0805805c g     F .text	0000058d              _ZN7Machine9TranslateEiPiib
+0805173c g     F .text	00000095              _ZN6Thread8SelfTestEv
+0804a646  w    F .text	0000008e              _ZN9HashTableIiPcED1Ev
+08059f64  w    O .rodata	0000000c              _ZTI10SortedListIP16PendingInterruptE
+0804f2ea g     F .text	0000010a              _ZN9Scheduler10ReadyToRunEP6Thread
+0804baf6  w    F .text	00000011              _ZN12ListIteratorIPcE4NextEv
+08054d5a g     F .text	000000a4              _ZN18SynchConsoleOutputD2Ev
+080529fc  w    F .text	00000033              _ZN12ElevatorInfo12CheckArrivedEv
+0804c67c g     F .text	00000013              _Z10RandomInitj
+0804ffee g     F .text	0000002a              _ZN9SemaphoreD1Ev
+08050580 g     F .text	000000a1              _ZN9Condition6SignalEP4Lock
+0804c8c0 g     F .text	00000085              _Z4ReadiPci
+08050018 g     F .text	0000000a              _ZN9Semaphore7getNameEv
+0804c174  w    F .text	0000008d              _ZN4ListIPcED2Ev
+0805b84c  w    O .rodata	0000000c              _ZTI9SynchDisk
+00000000       F *UND*	00000000              signal@@GLIBC_2.0
+08058bc0  w    F .text	0000000e              _ZN10FileSystemC1Eb
+08049334 g     F .text	00000080              _ZNK6BitMap5PrintEv
+0805aca8  w    O .rodata	00000010              _ZTS13ConsoleOutput
+08049778 g     F .text	0000005c              _ZN5Debug9IsEnabledEc
+0804b80a  w    F .text	00000017              _ZN11ListElementIiEC2Ei
+0805076a  w    F .text	0000001e              _ZN4ListIP9SemaphoreED0Ev
+00000000  w      *UND*	00000000              __gmon_start__
+08052702  w    F .text	000000c4              _ZN12ElevatorInfo6MoveToEi
+00000000  w      *UND*	00000000              _Jv_RegisterClasses
+0804c4de  w    F .text	00000154              _ZN4ListIiE7PrependEi
+0805a4cc  w    O .rodata	00000008              _ZTI4ListIP6ThreadE
+080555b4 g     F .text	0000015b              _ZN7Machine8DebuggerEv
+0805919c g     F .text	00000208              _ZN4Disk11ReadRequestEiPc
+0805a7e4  w    O .rodata	00000008              _ZTI4ListIP20PendingElevatorEventE
+08049a8a  w    F .text	00000025              _ZN10SortedListIiEC2EPFiiiE
+08057cb4 g     F .text	000001fe              _ZN7Machine7ReadMemEiiPi
+0805b99c  w    O .rodata	0000000c              _ZTI4Disk
+0804da50  w    F .text	00000017              _ZN11ListElementIP16PendingInterruptEC1ES1_
+08059aa0 g     O .rodata	00000004              _fp_hw
+0805a790  w    O .rodata	00000014              _ZTV12ElevatorBank
+08050a12  w    F .text	00000154              _ZN4ListIP9SemaphoreE7PrependES1_
+08050dd2 g     F .text	00000065              _ZN6ThreadC2EPc
+080490a8 g     F .text	00000134              _ZN6BitMap5ClearEi
+0804ab82  w    F .text	0000023b              _ZN4ListIiE6RemoveEi
+00000000       F *UND*	00000000              _ZdlPv@@GLIBCXX_3.4
+08058cae g     F .text	000000a4              _ZN9SynchDiskD1Ev
+08052552  w    F .text	0000001f              _ZN20PendingElevatorEventC2E13ElevatorEventii
+0804c202  w    F .text	0000001e              _ZN4ListIPcED0Ev
+0804cb7a g     F .text	0000001f              _ZN16PendingInterruptC2EP11CallBackObji7IntType
+08055b00 g     F .text	00000106              _ZN7Machine3RunEv
+0804fa9e  w    F .text	000000d6              _ZN4ListIP6ThreadE11RemoveFrontEv
+080506ae  w    F .text	0000002e              _ZN4ListIP9SemaphoreEC2Ev
+00000000       F *UND*	00000000              strchr@@GLIBC_2.0
+0804f496 g     F .text	000002e7              _ZN9Scheduler3RunEP6Threadb
+0804fba4  w    F .text	00000017              _ZN11ListElementIP6ThreadEC2ES1_
+08059a74 g     F .fini	00000000              _fini
+08054c7a g     F .text	000000e0              _ZN18SynchConsoleOutputC2EPc
+0805599c g     F .text	0000007b              _ZN7Machine12ReadRegisterEi
+08050dd2 g     F .text	00000065              _ZN6ThreadC1EPc
+08050622 g     F .text	00000031              _ZN9Condition9BroadcastEP4Lock
+0804a5f8  w    F .text	00000030              _ZN10SortedListIiED2Ev
+080551b2 g     F .text	00000067              _ZN13ConsoleOutputD1Ev
+08052ca6  w    F .text	0000008d              _ZN4ListIP20PendingElevatorEventED2Ev
+00000000       F *UND*	00000000              _ZNSt8ios_base4InitC1Ev@@GLIBCXX_3.4
+0804b1dc  w    F .text	000001c5              _ZNK9HashTableIiPcE11SanityCheckEv
+0804eeee  w    F .text	00000062              _ZN9SynchListIiE11RemoveFrontEv
+08052c78  w    F .text	0000002e              _ZN4ListIP20PendingElevatorEventEC1Ev
+0804a6d4  w    F .text	00000074              _ZN9HashTableIiPcE11InitBucketsEi
+00000000       F *UND*	00000000              write@@GLIBC_2.0
+0804e392 g     F .text	00000065              _ZN5TimerC2EbP11CallBackObj
+0804fbbc  w    F .text	00000038              _ZNK4ListIP6ThreadE8IsInListES1_
+08052572  w    F .text	00000066              _ZN12ElevatorInfoC2Ev
+08061940 g     O .bss	0000008c              _ZSt4cerr@@GLIBCXX_3.4
+08053558 g     F .text	000000a4              _ZN17ElevatorInspectorD2Ev
+080525d8  w    F .text	0000002a              _ZN12ElevatorInfoD1Ev
+0804eba4  w    F .text	00000011              _ZN6Thread9setStatusE12ThreadStatus
+0804e0be g     F .text	00000080              _ZN10StatisticsC1Ev
+0804e4ee  w    F .text	0000000e              _ZN11CallBackObjC2Ev
+0805a4bc  w    O .rodata	00000010              _ZTS4ListIP6ThreadE
+0805896c g     F .text	00000059              _ZN14UserProgKernelD2Ev
+0804d976  w    F .text	0000002e              _ZN4ListIP16PendingInterruptEC1Ev
+0804d622  w    F .text	000000d6              _ZN4ListIP16PendingInterruptE11RemoveFrontEv
+08054c64 g     F .text	00000016              _ZN17SynchConsoleInput8CallBackEv
+0804e77a g     F .text	00000122              _ZN14ThreadedKernelC1EiPPc
+0804e754  w    F .text	0000000b              _ZN9Interrupt9getStatusEv
+08050e38 g     F .text	000000f0              _ZN6ThreadD2Ev
+0804b3ca  w    F .text	000000bb              _ZN12HashIteratorIiPcE4NextEv
+08054c10 g     F .text	00000054              _ZN17SynchConsoleInput7GetCharEv
+08053460 g     F .text	000000f8              _ZN17ElevatorInspectorC2Ev
+08054e1c g     F .text	0000004e              _ZN18SynchConsoleOutput7PutCharEc
+08051a34 g     F .text	0000001e              _ZN12ElevatorBankD0Ev
+0805451c  w    F .text	0000003f              _ZN8OpenFile6ReadAtEPcii
+080535fc g     F .text	0000001e              _ZN17ElevatorInspectorD0Ev
+0804b85e  w    F .text	00000010              _ZN12ListIteratorIPcEC2EP4ListIS0_E
+08054edc g     F .text	0000009c              _ZN12ConsoleInputC1EPcP11CallBackObj
+080595ac g     F .text	00000024              _ZN4Disk8CallBackEv
+0804fd48  w    F .text	0000026b              _ZNK4ListIP6ThreadE11SanityCheckEv
+0804f28c g     F .text	00000033              _ZN9SchedulerC1Ev
+0804e6c6  w    F .text	00000070              _ZN5AlarmD1Ev
+00000000       F *UND*	00000000              __libc_start_main@@GLIBC_2.0
+0804b7dc  w    F .text	0000002e              _ZN4ListIPcEC1Ev
+0804ee20  w    F .text	00000060              _ZN9SynchListIiED1Ev
+0805b838  w    O .rodata	00000014              _ZTV9SynchDisk
+0805ab78  w    O .rodata	00000014              _ZTV18SynchConsoleOutput
+0804afb0  w    F .text	000000d5              _ZNK10SortedListIiE11SanityCheckEv
+0804cb7a g     F .text	0000001f              _ZN16PendingInterruptC1EP11CallBackObji7IntType
+08052e38  w    F .text	00000154              _ZN4ListIP20PendingElevatorEventE6AppendES1_
+08059f8c  w    O .rodata	00000008              _ZTI4ListIP16PendingInterruptE
+0804e6ba  w    F .text	0000000c              _ZN5Timer7DisableEv
+0804a9d4  w    F .text	0000000f              _ZN12ListIteratorIiE6IsDoneEv
+08061b1c g     O .bss	00000004              _eax_save
+00000000       F *UND*	00000000              _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c@@GLIBCXX_3.4
+08050472 g     F .text	0000010d              _ZN9Condition4WaitEP4Lock
+08054b4e g     F .text	000000a4              _ZN17SynchConsoleInputD1Ev
+08055710 g     F .text	0000028c              _ZN7Machine9DumpStateEv
+08052602  w    F .text	0000008c              _ZN12ElevatorInfo9OpenDoorsEv
+0805036c g     F .text	00000088              _ZN4Lock7ReleaseEv
+08052a30  w    F .text	0000000b              _ZN4ListIP6ThreadE9NumInListEv
+0805abd4  w    O .rodata	00000014              _ZTS17SynchConsoleInput
+0804d9a4  w    F .text	0000008d              _ZN4ListIP16PendingInterruptED2Ev
+08048bb0       F *UND*	00000000              _ZNSt8ios_base4InitD1Ev@@GLIBCXX_3.4
+080554ae g     F .text	00000040              _ZN7MachineD1Ev
+00000000       F *UND*	00000000              read@@GLIBC_2.0
+08054fde g     F .text	0000001e              _ZN12ConsoleInputD0Ev
+0804ea6a g     F .text	000000de              _ZN14ThreadedKernel8SelfTestEv
+00000000  w      *UND*	00000000              _ITM_deregisterTMCloneTable
+08048e3e g     F .text	00000124              _ZN6BitMapC1Ei
+00000000       F *UND*	00000000              _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@@GLIBCXX_3.4
+08058dbe g     F .text	0000004e              _ZN9SynchDisk11WriteSectorEiPc
+08050468 g     F .text	0000000a              _ZN9Condition7getNameEv
+08054dfe g     F .text	0000001e              _ZN18SynchConsoleOutputD0Ev
+08049ea2  w    F .text	00000303              _ZN10SortedListIiE8SelfTestEPii
+080545ab g     F .text	0000000d              _Z8sysOSAddii
+08053e6a g     F .text	00000015              _ZN9AddrSpaceD2Ev
+08051b9a g     F .text	0000012a              _ZN12ElevatorBank6MoveToEii
+08059aa4 g     O .rodata	00000004              _IO_stdin_used
+08057c72 g     F .text	00000013              _Z11ShortToHostt
+0805a8a8  w    O .rodata	00000014              _ZTV17ElevatorInspector
+0804e3f8 g     F .text	00000028              _ZN5Timer8CallBackEv
+08059bf4  w    O .rodata	0000000a              _ZTS4ListIPcE
+08055238 g     F .text	00000035              _ZN13ConsoleOutput8CallBackEv
+0804f77e g     F .text	0000003b              _ZN9Scheduler18CheckToBeDestroyedEv
+080493b4 g     F .text	0000035b              _ZN6BitMap8SelfTestEv
+0805aba4  w    O .rodata	0000000c              _ZTI18SynchConsoleOutput
+0804ee20  w    F .text	00000060              _ZN9SynchListIiED2Ev
+0804ab4a  w    F .text	00000038              _ZNK4ListIiE8IsInListEi
+0804a748  w    F .text	00000010              _ZN12ListIteratorIiEC2EP4ListIiE
+0805040c g     F .text	00000031              _ZN9ConditionC2EPc
+08055422 g     F .text	0000008b              _ZN7MachineC2Eb
+00000000  w      *UND*	00000000              _ITM_registerTMCloneTable
+0805119c g     F .text	000000f2              _ZN6Thread6FinishEv
+080610c0 g       .data	00000000              __data_start
+08055144 g     F .text	0000006d              _ZN13ConsoleOutputC2EPcP11CallBackObj
+080595d0 g     F .text	0000009e              _ZN4Disk10TimeToSeekEiPi
+00000000       F *UND*	00000000              _ZNSolsEPKv@@GLIBCXX_3.4
+080593a4 g     F .text	00000208              _ZN4Disk12WriteRequestEiPc
+0804e9d6 g     F .text	0000007d              _ZN14ThreadedKernelD1Ev
+0804e540  w    F .text	00000030              _ZN5TimerD1Ev
+08051034 g     F .text	00000080              _ZN6Thread13CheckOverflowEv
+080502b2 g     F .text	00000063              _ZN4LockC1EPc
+0805acb8  w    O .rodata	0000000c              _ZTI12ConsoleInput
+08054ffc g     F .text	000000f7              _ZN12ConsoleInput8CallBackEv
+08052f8c  w    F .text	00000017              _ZN11ListElementIP20PendingElevatorEventEC1ES1_
+08059bd8  w    O .rodata	0000001c              _ZTV4ListIiE
+0805128e g     F .text	00000148              _ZN6Thread5YieldEv
+0804a54c  w    F .text	0000008d              _ZN4ListIiED1Ev
+0804c4c4  w    F .text	0000001a              _ZN10SortedListIiE6AppendEi
+080550f4 g     F .text	0000004f              _ZN12ConsoleInput7GetCharEv
+0804da32  w    F .text	0000001e              _ZN4ListIP16PendingInterruptED0Ev
+08054a6e g     F .text	000000e0              _ZN17SynchConsoleInputC1EPc
+08061afc g     O .bss	00000004              debug
+0804a748  w    F .text	00000010              _ZN12ListIteratorIiEC1EP4ListIiE
+0805a4a0  w    O .rodata	0000001c              _ZTV4ListIP6ThreadE
+0804ebb6  w    F .text	0000001b              _ZN9Interrupt6EnableEv
+0805a594  w    O .rodata	00000013              _ZTS4ListIP9SemaphoreE
+080545b8 g     F .text	0000045b              _Z16ExceptionHandler13ExceptionType
+08059c18  w    O .rodata	0000000c              _ZTI10SortedListIiE
+0804bea8  w    F .text	0000008f              _ZNK9HashTableIiPcE12FindInBucketEiiPS0_
+0804ec6e  w    F .text	000001b1              _ZN9SynchListIiE8SelfTestEi
+080619e0  w    O .bss	0000002c              _ZTVN10__cxxabiv117__class_type_infoE@@CXXABI_1.3
+0804e4fc  w    F .text	00000025              _ZN11CallBackObjD1Ev
+08048f62 g     F .text	00000016              _ZN6BitMapD2Ev
+08050788  w    F .text	00000154              _ZN4ListIP9SemaphoreE6AppendES1_
+08055c5c g     F .text	00001d26              _ZN7Machine14OneInstructionEP11Instruction
+08059b98  w    O .rodata	0000001c              _ZTV4ListIPcE
+08054506  w    F .text	00000015              _ZN8OpenFileD1Ev
+08048e3e g     F .text	00000124              _ZN6BitMapC2Ei
+0804b628  w    F .text	00000141              _ZN9HashTableIiPcE6RemoveEi
+08051cc4 g     F .text	00000087              _ZN12ElevatorBank15WhereIsElevatorEi
+0804976a g     F .text	0000000d              _ZN5DebugC2EPc
+0804a646  w    F .text	0000008e              _ZN9HashTableIiPcED2Ev
+08050316 g     F .text	00000027              _ZN4LockD2Ev
+0804bf38  w    F .text	0000023b              _ZN4ListIPcE6RemoveES0_
+080506dc  w    F .text	0000008d              _ZN4ListIP9SemaphoreED2Ev
+08048d70 g     F .text	00000004              .hidden __x86.get_pc_thunk.bx
+080506ae  w    F .text	0000002e              _ZN4ListIP9SemaphoreEC1Ev
+0805159f g     F .text	00000013              _Z11ThreadPrintP6Thread
+08053be2  w    F .text	0000002b              _ZN12ElevatorBank22getNextControllerEventEPiS0_
+0804e60a g     F .text	00000054              _ZN5Alarm8CallBackEv
+08052f8c  w    F .text	00000017              _ZN11ListElementIP20PendingElevatorEventEC2ES1_
+08054d5a g     F .text	000000a4              _ZN18SynchConsoleOutputD1Ev
+080515b2 g     F .text	0000008a              _ZN6Thread13StackAllocateEPFvPvES0_
+08058bce g     F .text	000000e0              _ZN9SynchDiskC1EPc
+08051958 g     F .text	000000dc              _ZN12ElevatorBankD2Ev
+08054f78 g     F .text	00000066              _ZN12ConsoleInputD2Ev
+0804e58e g     F .text	0000007b              _ZN5AlarmC1Eb
+08054c7a g     F .text	000000e0              _ZN18SynchConsoleOutputC1EPc
+08054350 g     F .text	000000f6              _ZN9AddrSpace13InitRegistersEv
+0804e420 g     F .text	00000073              _ZN5Timer12SetInterruptEv
+08053c80  w    F .text	00000045              _ZN17ElevatorInspector26WaitForNextControllerEventEPiS0_
+00000000       F *UND*	00000000              _ZNSi3getEPcic@@GLIBCXX_3.4
+00000000       F *UND*	00000000              unlink@@GLIBC_2.0
+0805033e g     F .text	0000000a              _ZN4Lock7getNameEv
+0804d5ec  w    F .text	00000010              _ZN4ListIP16PendingInterruptE7IsEmptyEv
+080618a0 g     O .data	00000000              .hidden __TMC_END__
+0804b606  w    F .text	00000021              _ZN9HashTableIiPcE9IsInTableEi
+080589c5 g     F .text	00000028              _Z11ForkExecuteP6Thread
+08049ab0  w    F .text	00000037              _ZN9HashTableIiPcEC1EPFiS0_EPFjiE
+0805246a g     F .text	0000008c              _ZN12ElevatorBank9PostEventEP4ListIP20PendingElevatorEventE13ElevatorEventiib
+08055a18 g     F .text	0000007e              _ZN7Machine13WriteRegisterEii
+0804b80a  w    F .text	00000017              _ZN11ListElementIiEC1Ei
+08061a20 g     O .bss	0000008c              _ZSt4cout@@GLIBCXX_3.4
+08049a5c  w    F .text	0000002e              _ZN4ListIiEC1Ev
+0804a54c  w    F .text	0000008d              _ZN4ListIiED2Ev
+0804ffb4 g     F .text	0000003a              _ZN9SemaphoreC2EPci
+0805b988  w    O .rodata	00000014              _ZTV4Disk
+08049a8a  w    F .text	00000025              _ZN10SortedListIiEC1EPFiiiE
+080610c4 g     O .data	00000000              .hidden __dso_handle
+08055144 g     F .text	0000006d              _ZN13ConsoleOutputC1EPcP11CallBackObj
+080538d0 g     F .text	00000291              _ZN17ElevatorInspector14ControllerTestEv
+08059872 g     F .text	000000c8              _ZN4Disk10UpdateLastEi
+0804cfa0 g     F .text	000000e8              _ZN9Interrupt4IdleEv
+0804c966 g     F .text	00000085              _Z9WriteFileiPci
+080551b2 g     F .text	00000067              _ZN13ConsoleOutputD2Ev
+0805043e g     F .text	0000002a              _ZN9ConditionD1Ev
+0805521a g     F .text	0000001e              _ZN13ConsoleOutputD0Ev
+0805428a g     F .text	000000c6              _ZN9AddrSpace7ExecuteEPc
+08059a00 g     F .text	00000061              __libc_csu_init
+0805a8bc  w    O .rodata	0000000c              _ZTI17ElevatorInspector
+0804a9e4  w    F .text	00000011              _ZN12ListIteratorIiE4NextEv
+0804a5f8  w    F .text	00000030              _ZN10SortedListIiED1Ev
+080509c2  w    F .text	00000017              _ZN11ListElementIP9SemaphoreEC2ES1_
+0804c356  w    F .text	00000154              _ZN4ListIPcE7PrependES0_
+0805b9a8  w    O .rodata	00000006              _ZTS4Disk
+08051dd6 g     F .text	000000bc              _ZN12ElevatorBank11PressButtonEi9Direction
+08052fdc  w    F .text	00000154              _ZN4ListIP20PendingElevatorEventE7PrependES1_
+080529a2  w    F .text	0000005a              _ZN12ElevatorInfo16ReachedNextFloorEv
+0804e0be g     F .text	00000080              _ZN10StatisticsC2Ev
+08058d52 g     F .text	0000001e              _ZN9SynchDiskD0Ev
+08058e0c g     F .text	00000016              _ZN9SynchDisk8CallBackEv
+08049ab0  w    F .text	00000037              _ZN9HashTableIiPcEC2EPFiS0_EPFjiE
+08051a52 g     F .text	000000bc              _ZN12ElevatorBank9OpenDoorsEi
+00000000       F *UND*	00000000              _ZNSolsEj@@GLIBCXX_3.4
+0804e13e g     F .text	000001f8              _ZN10Statistics5PrintEv
+0804fb74  w    F .text	0000002f              _ZNK4ListIP6ThreadE5ApplyEPFvS1_E
+08061af8 g     O .bss	00000004              kernel
+00000000       F *UND*	00000000              atoi@@GLIBC_2.0
+0804f2c0 g     F .text	0000002a              _ZN9SchedulerD1Ev
+080503f4 g     F .text	00000017              _ZN4Lock21IsHeldByCurrentThreadEv
+0804c306  w    F .text	00000017              _ZN11ListElementIPcEC2ES0_
+08048c30       F *UND*	00000000              __cxa_pure_virtual@@CXXABI_1.3
+0805a7c4  w    O .rodata	0000001f              _ZTS4ListIP20PendingElevatorEventE
+0804c220  w    F .text	00000010              _ZN4ListIPcE7IsEmptyEv
+08053c3a  w    F .text	00000045              _ZN17ElevatorInspector21WaitForNextRiderEventEPiS0_
+0804f28c g     F .text	00000033              _ZN9SchedulerC2Ev
+0804d946  w    F .text	0000002f              _ZNK4ListIP16PendingInterruptE5ApplyEPFvS1_E
+08057c85 g     F .text	00000013              _Z13WordToMachinej
+00000000       F *UND*	00000000              _Znwj@@GLIBCXX_3.4
+08051d4c g     F .text	00000089              _ZN12ElevatorBank13MarkDirectionEi9Direction
+0805184e g     F .text	00000109              _ZN12ElevatorBankC1EiiP11CallBackObjS1_
+0805043e g     F .text	0000002a              _ZN9ConditionD2Ev
+0805a088  w    O .rodata	00000007              _ZTS5Timer
+0804a5da  w    F .text	0000001e              _ZN4ListIiED0Ev
+0805abc8  w    O .rodata	0000000c              _ZTI17SynchConsoleInput
+00000000       F *UND*	00000000              select@@GLIBC_2.0
+0805016a g     F .text	00000148              _ZN9Semaphore8SelfTestEv
+0804cc3c g     F .text	00000057              _ZN9InterruptD2Ev
+08050f28 g     F .text	0000010b              _ZN6Thread4ForkEPFvPvES0_
+00000000       F *UND*	00000000              close@@GLIBC_2.0
+08058644 g     F .text	000002aa              _ZN14UserProgKernelC2EiPPc
+0804f7ba g     F .text	00000032              _ZN9Scheduler5PrintEv
+00000000       F *UND*	00000000              _Znaj@@GLIBCXX_3.4
+0804bada  w    F .text	0000000b              _ZN4ListIPcE9NumInListEv
+0805a578  w    O .rodata	0000001c              _ZTV4ListIP9SemaphoreE
+0804f88e  w    F .text	0000008d              _ZN4ListIP6ThreadED1Ev
+08057982 g     F .text	00000042              _ZN7Machine11DelayedLoadEii
+0804c64d g     F .text	00000013              _Z5Delayi
+0804f860  w    F .text	0000002e              _ZN4ListIP6ThreadEC2Ev
+08050b66  w    F .text	0000026b              _ZNK4ListIP9SemaphoreE11SanityCheckEv
+08054bf2 g     F .text	0000001e              _ZN17SynchConsoleInputD0Ev
+0804b4a6  w    F .text	00000160              _ZN9HashTableIiPcE6InsertES0_
+0804a9f6  w    F .text	00000154              _ZN4ListIiE6AppendEi
+08049ae8  w    F .text	000003b9              _ZN4ListIiE8SelfTestEPii
+0804d5fc  w    F .text	00000025              _ZN10SortedListIP16PendingInterruptEC1EPFiS1_S1_E
+0805a7f8  w    O .rodata	0000000f              _ZTS12ElevatorBank
+0804cd28 g     F .text	000000b0              _ZN9Interrupt8SetLevelE9IntStatus
+08051f18 g     F .text	000000ff              _ZN12ElevatorBank13EnterElevatorEii
+0804da68  w    F .text	00000038              _ZNK4ListIP16PendingInterruptE8IsInListES1_
+0804d976  w    F .text	0000002e              _ZN4ListIP16PendingInterruptEC2Ev
+0804ffb4 g     F .text	0000003a              _ZN9SemaphoreC1EPci
+08053558 g     F .text	000000a4              _ZN17ElevatorInspectorD1Ev
+0804d728  w    F .text	0000001e              _ZN10SortedListIP16PendingInterruptED0Ev
+0804cf2c g     F .text	00000073              _ZN9Interrupt13YieldOnReturnEv
+080618a0 g       .bss	00000000              __bss_start
+08054f78 g     F .text	00000066              _ZN12ConsoleInputD1Ev
+0804e77a g     F .text	00000122              _ZN14ThreadedKernelC2EiPPc
+08052fa4  w    F .text	00000038              _ZNK4ListIP20PendingElevatorEventE8IsInListES1_
+08052d62  w    F .text	000000d6              _ZN4ListIP20PendingElevatorEventE11RemoveFrontEv
+08055af2  w    F .text	0000000e              _ZN9Interrupt9setStatusE13MachineStatus
+0804fbf4  w    F .text	00000154              _ZN4ListIP6ThreadE7PrependES1_
+08054b4e g     F .text	000000a4              _ZN17SynchConsoleInputD2Ev
+08061ac0  w    O .bss	0000002c              _ZTVN10__cxxabiv120__si_class_type_infoE@@CXXABI_1.3
+080508ec  w    F .text	000000d6              _ZN4ListIP9SemaphoreE11RemoveFrontEv
+0804e570  w    F .text	0000001e              _ZN5TimerD0Ev
+08059996 g       .text	00000000              ThreadRoot
+0804d6f8  w    F .text	00000030              _ZN10SortedListIP16PendingInterruptED2Ev
+00000000       F *UND*	00000000              __stack_chk_fail@@GLIBC_2.4
+08054edc g     F .text	0000009c              _ZN12ConsoleInputC2EPcP11CallBackObj
+08049872 g     F .text	0000018e              _Z11LibSelfTestv
+0804c945 g     F .text	00000021              _Z11ReadPartialiPci
+08052552  w    F .text	0000001f              _ZN20PendingElevatorEventC1E13ElevatorEventii
+0804bd16  w    F .text	00000154              _ZN4ListIPcE6AppendES0_
+0805167c g     F .text	00000043              _ZN6Thread16RestoreUserStateEv
+0805ab90  w    O .rodata	00000014              _ZTV17SynchConsoleInput
+0804b15c  w    F .text	00000080              _ZN12HashIteratorIiPcEC2EP9HashTableIiS0_E
+0804e9d6 g     F .text	0000007d              _ZN14ThreadedKernelD2Ev
+080544ee  w    F .text	00000017              _ZN8OpenFileC2Ei
+0804bb08  w    F .text	00000099              _ZNK9HashTableIiPcE9HashValueEi
+080528f2  w    F .text	000000b0              _ZN12ElevatorInfo4ExitEi
+0804e540  w    F .text	00000030              _ZN5TimerD2Ev
+08058644 g     F .text	000002aa              _ZN14UserProgKernelC1EiPPc
+080599a4 g       .text	00000000              SWITCH
+0804ca6e g     F .text	00000023              _Z4Telli
+0805896c g     F .text	00000059              _ZN14UserProgKernelD1Ev
+08055422 g     F .text	0000008b              _ZN7MachineC1Eb
+0804a628  w    F .text	0000001e              _ZN10SortedListIiED0Ev
+08058bc0  w    F .text	0000000e              _ZN10FileSystemC2Eb
+0804ebd2  w    F .text	0000009c              _ZN9SynchListIiEC1Ev
+0805a5a8  w    O .rodata	00000008              _ZTI4ListIP9SemaphoreE
+0805ac9c  w    O .rodata	0000000c              _ZTI13ConsoleOutput
+0804b822  w    F .text	0000003c              _ZNK9HashTableIiPcE18FindNextFullBucketEi
+08052d52  w    F .text	00000010              _ZN4ListIP20PendingElevatorEventE7IsEmptyEv
+0804f91c  w    F .text	0000001e              _ZN4ListIP6ThreadED0Ev
+0805a068  w    O .rodata	00000014              _ZTV11CallBackObj
+08059c24  w    O .rodata	00000009              _ZTS4ListIiE
+0804b15c  w    F .text	00000080              _ZN12HashIteratorIiPcEC1EP9HashTableIiS0_E
+0804d938  w    F .text	0000000e              _ZN4ListIP16PendingInterruptE5FrontEv
+0804c68f g     F .text	0000000d              _Z12RandomNumberv
+00000000       F *UND*	00000000              sleep@@GLIBC_2.0
+0804b76a  w    F .text	00000071              _ZN9HashTableIiPcE13DeleteBucketsEPP4ListIS0_Ei
+0804f860  w    F .text	0000002e              _ZN4ListIP6ThreadEC1Ev
+0804cdd8 g     F .text	00000154              _ZN9Interrupt7OneTickEv
+080525d8  w    F .text	0000002a              _ZN12ElevatorInfoD2Ev
+08052ca6  w    F .text	0000008d              _ZN4ListIP20PendingElevatorEventED1Ev
+0804a1a6  w    F .text	000003a5              _ZN9HashTableIiPcE8SelfTestEPS0_i
+0805a7ec  w    O .rodata	0000000c              _ZTI12ElevatorBank
+080554ae g     F .text	00000040              _ZN7MachineD2Ev
+08059f40  w    O .rodata	00000022              _ZTS10SortedListIP16PendingInterruptE
+08052a3c  w    F .text	0000023b              _ZN4ListIP6ThreadE6RemoveES1_
+00000000       F *UND*	00000000              _ZdaPv@@GLIBCXX_3.4
+0804c174  w    F .text	0000008d              _ZN4ListIPcED1Ev
+08052572  w    F .text	00000066              _ZN12ElevatorInfoC1Ev
+0804b086  w    F .text	000000d6              _ZN4ListIiE11RemoveFrontEv
+080513d6 g     F .text	0000019b              _ZN6Thread5SleepEb
+080533af g     F .text	000000b0              _Z16ElevatorSelfTestv
+0804ffee g     F .text	0000002a              _ZN9SemaphoreD2Ev
+0804d6f8  w    F .text	00000030              _ZN10SortedListIP16PendingInterruptED1Ev
+0804b7dc  w    F .text	0000002e              _ZN4ListIPcEC2Ev
+08053130  w    F .text	0000026b              _ZNK4ListIP20PendingElevatorEventE11SanityCheckEv
+08059c08  w    O .rodata	00000010              _ZTS10SortedListIiE
+080588ee g     F .text	0000007e              _ZN14UserProgKernel10InitializeEv
+0804f93a  w    F .text	00000154              _ZN4ListIP6ThreadE6AppendES1_
+08053da8 g     F .text	000000c2              _ZN9AddrSpaceC2Ev
+0804bba2  w    F .text	0000007b              _ZN12ListIteratorIPcE4ItemEv
+0805a0a0  w    O .rodata	00000008              _ZTI11CallBackObj
+08061b20 g       .bss	00000000              _end
+080590a0 g     F .text	0000001e              _ZN4DiskD0Ev
+08059c30  w    O .rodata	00000008              _ZTI4ListIiE
+00000000       F *UND*	00000000              _ZNSolsEPFRSoS_E@@GLIBCXX_3.4
+08053e80 g     F .text	0000040a              _ZN9AddrSpace4LoadEPc
+08054506  w    F .text	00000015              _ZN8OpenFileD2Ev
+0805a7a8  w    O .rodata	0000001c              _ZTV4ListIP20PendingElevatorEventE
+08059044 g     F .text	0000005c              _ZN4DiskD2Ev
+0804e89c g     F .text	00000139              _ZN14ThreadedKernel10InitializeEv
+0804d5fc  w    F .text	00000025              _ZN10SortedListIP16PendingInterruptEC2EPFiS1_S1_E
+08054e6a g     F .text	00000016              _ZN18SynchConsoleOutput8CallBackEv
+0804c9eb g     F .text	00000083              _Z5Lseekiii
+08054a6e g     F .text	000000e0              _ZN17SynchConsoleInputC2EPc
+080522ae g     F .text	00000163              _ZN12ElevatorBank8CallBackEv
+0804b86e  w    F .text	0000026b              _ZNK4ListIPcE11SanityCheckEv
+080527c6  w    F .text	0000012c              _ZN12ElevatorInfo5EnterEi
+0804c6c8 g     F .text	000000d7              _Z8PollFilei
+0804a758  w    F .text	0000026b              _ZNK4ListIiE11SanityCheckEv
+0804c306  w    F .text	00000017              _ZN11ListElementIPcEC1ES0_
+080554ee g     F .text	000000c5              _ZN7Machine14RaiseExceptionE13ExceptionTypei
+0804b3b2  w    F .text	00000018              _ZN12HashIteratorIiPcE6IsDoneEv
+08048f78 g     F .text	0000012f              _ZN6BitMap4MarkEi
+08050316 g     F .text	00000027              _ZN4LockD1Ev
+08051e92 g     F .text	00000086              _ZN12ElevatorBank12getDirectionEi
+08052c78  w    F .text	0000002e              _ZN4ListIP20PendingElevatorEventEC2Ev
+0805a050  w    O .rodata	00000014              _ZTV5Timer
+08051b0e g     F .text	0000008c              _ZN12ElevatorBank10CloseDoorsEi
+0804ca91 g     F .text	00000075              _Z5Closei
+00000000       F *UND*	00000000              rand@@GLIBC_2.0
+00000000       F *UND*	00000000              sscanf@@GLIBC_2.0
+080492ee g     F .text	00000046              _ZNK6BitMap8NumClearEv
+0804a9c4  w    F .text	00000010              _ZN4ListIiE7IsEmptyEv
+080491dc g     F .text	000000be              _ZNK6BitMap4TestEi
+0804c69c g     F .text	00000013              _Z17AllocBoundedArrayi
+0804e392 g     F .text	00000065              _ZN5TimerC1EbP11CallBackObj
+0804b3a2  w    F .text	00000010              _ZN9HashTableIiPcE7IsEmptyEv
+0804ebd2  w    F .text	0000009c              _ZN9SynchListIiEC2Ev
+080521ae g     F .text	000000ff              _ZN12ElevatorBank12ExitElevatorEii
+0805a10c  w    O .rodata	0000000c              _ZTI5Alarm
+0804e736  w    F .text	0000001e              _ZN5AlarmD0Ev
+00000000       F *UND*	00000000              lseek@@GLIBC_2.0
+0805966e g     F .text	00000048              _ZN4Disk10ModuloDiffEii
+08053460 g     F .text	000000f8              _ZN17ElevatorInspectorC1Ev
+0804adbe  w    F .text	000001f2              _ZN10SortedListIiE6InsertEi
+080510b4 g     F .text	000000e7              _ZN6Thread5BeginEv
+08058cae g     F .text	000000a4              _ZN9SynchDiskD2Ev
+080500b4 g     F .text	00000082              _ZN9Semaphore1VEv
+080508dc  w    F .text	00000010              _ZN4ListIP9SemaphoreE7IsEmptyEv
+08048cf0       F *UND*	00000000              _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4
+0804c230  w    F .text	000000d6              _ZN4ListIPcE11RemoveFrontEv
+0805a118  w    O .rodata	00000007              _ZTS5Alarm
+08052018 g     F .text	00000196              _ZN12ElevatorBank10PressFloorEii
+0805a8c8  w    O .rodata	00000014              _ZTS17ElevatorInspector
+080589ee g     F .text	00000171              _ZN14UserProgKernel3RunEv
+0804f3f4 g     F .text	000000a1              _ZN9Scheduler13FindNextToRunEv
+0804e522  w    F .text	0000001e              _ZN11CallBackObjD0Ev
+08059f70  w    O .rodata	0000001b              _ZTS4ListIP16PendingInterruptE
+0804e6c6  w    F .text	00000070              _ZN5AlarmD2Ev
+0804e58e g     F .text	0000007b              _ZN5AlarmC2Eb
+0805a0f8  w    O .rodata	00000014              _ZTV5Alarm
+0804cbd2 g     F .text	0000006a              _ZN9InterruptC1Ev
+0804de52  w    F .text	0000026b              _ZNK4ListIP16PendingInterruptE11SanityCheckEv
+0804d4e0 g     F .text	000000b1              _ZN9Interrupt9DumpStateEv
+080579c4 g     F .text	0000015a              _ZN11Instruction6DecodeEv
+080618a0 g       .data	00000000              _edata
+0804ef50  w    F .text	00000038              _ZN9SynchListIiE14SelfTestHelperEv
+0804c827 g     F .text	00000099              _Z16OpenForReadWritePcb
+08048d00       F *UND*	00000000              __gxx_personality_v0@@CXXABI_1.3
+0804b486  w    F .text	00000020              _ZN12HashIteratorIiPcED1Ev
+0804d088 g     F .text	0000004b              _ZN9Interrupt4HaltEv
+08053b62 g     F .text	00000024              _ZN17ElevatorInspector8CallBackEv
+0804ea54 g     F .text	00000015              _ZN14ThreadedKernel3RunEv
+08053da8 g     F .text	000000c2              _ZN9AddrSpaceC1Ev
+08057c6a g     F .text	00000008              _Z10WordToHostj
+08059bb8  w    O .rodata	0000001c              _ZTV10SortedListIiE
+08049a5c  w    F .text	0000002e              _ZN4ListIiEC2Ev
+0804dad4  w    F .text	000000d5              _ZNK10SortedListIP16PendingInterruptE11SanityCheckEv
+0804c660 g     F .text	0000000b              _Z5Abortv
+00000000       F *UND*	00000000              _Unwind_Resume@@GCC_3.0
+0804d20a g     F .text	00000275              _ZN9Interrupt10CheckIfDueEb
+08050348 g     F .text	00000023              _ZN4Lock7AcquireEv
+0804da50  w    F .text	00000017              _ZN11ListElementIP16PendingInterruptEC2ES1_
+00000000       F *UND*	00000000              strcmp@@GLIBC_2.0
+08053c0e  w    F .text	0000002b              _ZN12ElevatorBank17getNextRiderEventEPiS0_
+080596b6 g     F .text	000001bb              _ZN4Disk14ComputeLatencyEib
+0805361a g     F .text	000002b6              _ZN17ElevatorInspector9RiderTestEv
+00000000       F *UND*	00000000              exit@@GLIBC_2.0
+0804c31e  w    F .text	00000038              _ZNK4ListIPcE8IsInListES0_
+08058b60 g     F .text	00000005              _ZN14UserProgKernel8SelfTestEv
+0804f856  w    F .text	0000000a              _ZN9Interrupt8getLevelEv
+0804cb06 g     F .text	00000018              _Z6UnlinkPc
+08057eb2 g     F .text	000001aa              _ZN7Machine8WriteMemEiii
+0804929a g     F .text	00000054              _ZN6BitMap10FindAndSetEv
+0804c632 g     F .text	0000001b              _Z15CallOnUserAbortPFviE
+0804e4fc  w    F .text	00000025              _ZN11CallBackObjD2Ev
+08059f00  w    O .rodata	0000001c              _ZTV10SortedListIP16PendingInterruptE
+0804dcfe  w    F .text	00000154              _ZN4ListIP16PendingInterruptE6AppendES1_
+0804c79f g     F .text	00000088              _Z12OpenForWritePc
+0804e4ee  w    F .text	0000000e              _ZN11CallBackObjC1Ev
+0804f2c0 g     F .text	0000002a              _ZN9SchedulerD2Ev
+0804ee94  w    F .text	00000059              _ZN9SynchListIiE6AppendEi
+0804d9a4  w    F .text	0000008d              _ZN4ListIP16PendingInterruptED1Ev
+0805a07c  w    O .rodata	0000000c              _ZTI5Timer
+080509da  w    F .text	00000038              _ZNK4ListIP9SemaphoreE8IsInListES1_
+0805ac88  w    O .rodata	00000014              _ZTV12ConsoleInput
+0804976a g     F .text	0000000d              _ZN5DebugC1EPc
+0804efe2 g     F .text	0000024f              main
+0805526e g     F .text	000000c0              _ZN13ConsoleOutput7PutCharEc
+08048a9c g     F .init	00000000              _init
+08058bce g     F .text	000000e0              _ZN9SynchDiskC2EPc
+08059044 g     F .text	0000005c              _ZN4DiskD1Ev
+080502b2 g     F .text	00000063              _ZN4LockC2EPc
+0804cbd2 g     F .text	0000006a              _ZN9InterruptC2Ev
+08059c00  w    O .rodata	00000008              _ZTI4ListIPcE
+0804cc3c g     F .text	00000057              _ZN9InterruptD1Ev
+0804c6af g     F .text	00000019              _Z19DeallocBoundedArrayPci
+080544ee  w    F .text	00000017              _ZN8OpenFileC1Ei
+0805040c g     F .text	00000031              _ZN9ConditionC1EPc
+0804fa8e  w    F .text	00000010              _ZN4ListIP6ThreadE7IsEmptyEv
+0804bae6  w    F .text	0000000f              _ZN12ListIteratorIPcE6IsDoneEv
+0804be6a  w    F .text	0000003d              _ZNK9HashTableIiPcE4FindEiPS0_
+0805b858  w    O .rodata	0000000b              _ZTS9SynchDisk
+
+

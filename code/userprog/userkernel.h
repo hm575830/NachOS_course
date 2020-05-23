@@ -16,7 +16,6 @@
 #include "filesys.h"
 #include "machine.h"
 #include "synchdisk.h"
-#include "synchconsole.h"
 class SynchDisk;
 class UserProgKernel : public ThreadedKernel {
   public:
@@ -33,9 +32,6 @@ class UserProgKernel : public ThreadedKernel {
 // These are public for notational convenience.
     Machine *machine;
     FileSystem *fileSystem;
-    SynchConsoleInput *input;
-    SynchConsoleOutput *output;
-
 
 #ifdef FILESYS
     SynchDisk *synchDisk;

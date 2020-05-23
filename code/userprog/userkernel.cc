@@ -57,10 +57,7 @@ UserProgKernel::Initialize()
     ThreadedKernel::Initialize();	// init multithreading
 
     machine = new Machine(debugUserProg);
-    fileSystem = new FileSystem(); 
-    input = new SynchConsoleInput(NULL);
-    output = new SynchConsoleOutput(NULL);
-
+    fileSystem = new FileSystem();
 #ifdef FILESYS
     synchDisk = new SynchDisk("New SynchDisk");
 #endif // FILESYS
@@ -125,8 +122,7 @@ UserProgKernel::Run()
 
 void
 UserProgKernel::SelfTest() {
-/*
-    char ch;
+/*    char ch;
 
     ThreadedKernel::SelfTest();
 
@@ -148,9 +144,9 @@ UserProgKernel::SelfTest() {
     cout << "\n";
 
     // self test for running user programs is to run the halt program above
-
-
 */
+
+
 
 
 //	cout << "This is self test message from UserProgKernel\n" ;

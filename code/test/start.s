@@ -145,6 +145,11 @@ OSAdd:   //add
     	syscall    
     	j   $31  
 	.end OSAdd 
+OSPrint: //print msg
+	addiu $2,$0,SC_OSPrint
+	syscall
+	j   $31
+	.end OSPrint
 
 /* dummy function to keep gcc happy */
         .globl  __main

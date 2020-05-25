@@ -31,6 +31,7 @@
 #define SC_ThreadYield	10
 #define SC_PrintInt	11
 #define SC_OSAdd        12
+#define SC_OSPrint	20
 
 #ifndef IN_ASM
 
@@ -85,7 +86,7 @@ typedef int OpenFileId;
  * the console device.
  */
 
-#define ConsoleInput	0  
+#define ConsoleInput	0  //modify sysCallConsoleInput
 #define ConsoleOutput	1  
  
 /* Create a Nachos file, with "name" */
@@ -130,6 +131,7 @@ void ThreadYield();
 
 void PrintInt(int number);	//my System Call
 int OSAdd(int num1,int num2);
+void OSPrint(char* msg,int length); //my SysCall for print message console 
 #endif /* IN_ASM */
 
 #endif /* SYSCALL_H */

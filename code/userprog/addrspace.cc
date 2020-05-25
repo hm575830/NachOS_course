@@ -50,7 +50,7 @@ SwapHeader (NoffHeader *noffH)
 //	memory.  For now, this is really simple (1:1), since we are
 //	only uniprogramming, and we have a single unsegmented page table
 //----------------------------------------------------------------------
-
+bool AddrSpace::usedPhyPage[NumPhysPages] = {0};
 AddrSpace::AddrSpace()
 {
     pageTable = new TranslationEntry[NumPhysPages];
@@ -76,6 +76,9 @@ AddrSpace::AddrSpace()
 
 AddrSpace::~AddrSpace()
 {
+   for(int i = 0; i < numPages; i++) {
+        AddrSpace::usedPhyPage[pageTable[i].physicalPage] = false;
+   }
    delete pageTable;
 }
 
@@ -89,10 +92,12 @@ AddrSpace::~AddrSpace()
 //
 //	"fileName" is the file containing the object code to load into memory
 //----------------------------------------------------------------------
-
+//the reason why the original function just for one thread.
+/*
 bool 
 AddrSpace::Load(char *fileName) 
 {
+
     OpenFile *executable = kernel->fileSystem->Open(fileName);
     NoffHeader noffH;
     unsigned int size;
@@ -113,9 +118,9 @@ AddrSpace::Load(char *fileName)
 						// to leave room for the stack
     numPages = divRoundUp(size, PageSize);
 //	cout << "number of pages of " << fileName<< " is "<<numPages<<endl;
-    size = numPages * PageSize;
+    size = numPages * PageSize; 
 
-    ASSERT(numPages <= NumPhysPages);		// check we're not trying
+    ASSERT(numPages <= NumPhysPages);		// check we're not trying //possible modify (not consider 2 thread)
 						// to run anything too big --
 						// at least until we have
 						// virtual memory
@@ -138,6 +143,68 @@ AddrSpace::Load(char *fileName)
 			noffH.initData.size, noffH.initData.inFileAddr);
     }
 
+    delete executable;			// close file
+    return TRUE;			// success
+}*/
+//for multi_threading
+bool AddrSpace::Load(char *fileName) {
+    OpenFile *executable = kernel->fileSystem->Open(fileName);
+    NoffHeader noffH;
+    unsigned int size;
+    if (executable == NULL) {
+    	cerr << "Unable to open file " << fileName << "\n";
+    	return FALSE;
+    }
+    executable->ReadAt((char *)&noffH, sizeof(noffH), 0);
+    if ((noffH.noffMagic != NOFFMAGIC) && 
+        (WordToHost(noffH.noffMagic) == NOFFMAGIC)){
+    	SwapHeader(&noffH);
+    }
+    ASSERT(noffH.noffMagic == NOFFMAGIC);
+// how big is address space?
+    size = noffH.code.size + noffH.initData.size + noffH.uninitData.size 
+            + UserStackSize;	// we need to increase the size
+                        // to leave room for the stack
+    numPages = divRoundUp(size, PageSize);
+//	cout << "number of pages of " << fileName<< " is "<< numPages << endl;
+// morris add
+    pageTable = new TranslationEntry[numPages];
+    for(unsigned int i = 0, j = 0; i < numPages; i++) {
+        pageTable[i].virtualPage = i;
+        while(j < NumPhysPages && AddrSpace::usedPhyPage[j] == true) {
+            j++;
+	}
+        AddrSpace::usedPhyPage[j] = true;
+        pageTable[i].physicalPage = j;
+        pageTable[i].valid = true;
+        pageTable[i].use = false;
+        pageTable[i].dirty = false;
+        pageTable[i].readOnly = false;
+    }
+// end morris add
+    size = numPages * PageSize;
+    ASSERT(numPages <= NumPhysPages);		// check we're not trying
+                        // to run anything too big --
+                        // at least until we have
+                        // virtual memory
+    DEBUG(dbgAddr, "Initializing address space: " << numPages << ", " << size);
+// then, copy in the code and data segments into memory
+    if (noffH.code.size > 0) {
+        DEBUG(dbgAddr, "Initializing code segment.");
+    	DEBUG(dbgAddr, noffH.code.virtualAddr << ", " << noffH.code.size);
+// morris add
+        	executable->ReadAt(
+        &(kernel->machine->mainMemory[pageTable[noffH.code.virtualAddr/PageSize].physicalPage * PageSize + (noffH.code.virtualAddr%PageSize)]), noffH.code.size, noffH.code.inFileAddr);
+// end morris add
+    }
+    if (noffH.initData.size > 0) {
+        DEBUG(dbgAddr, "Initializing data segment.");
+    	DEBUG(dbgAddr, noffH.initData.virtualAddr << ", " << noffH.initData.size);
+// morris add
+        executable->ReadAt(
+        &(kernel->machine->mainMemory[pageTable[noffH.initData.virtualAddr/PageSize].physicalPage * PageSize + (noffH.code.virtualAddr%PageSize)]),noffH.initData.size, noffH.initData.inFileAddr);
+// end morris add
+    }
     delete executable;			// close file
     return TRUE;			// success
 }

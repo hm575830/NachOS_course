@@ -144,7 +144,10 @@ OSAdd:   //add
     	addiu $2,$0,SC_OSAdd    
     	syscall    
     	j   $31  
-	.end OSAdd 
+	.end OSAdd
+ 
+	.globl OSPrint
+	.ent OSPrint
 OSPrint: //print msg
 	addiu $2,$0,SC_OSPrint
 	syscall

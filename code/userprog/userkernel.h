@@ -18,6 +18,8 @@
 #include "synchdisk.h"
 #include "synchconsole.h"
 class SynchDisk;
+class SynchConsoleInput;
+class SynchConsoleOutput; 
 class UserProgKernel : public ThreadedKernel {
   public:
     UserProgKernel(int argc, char **argv);

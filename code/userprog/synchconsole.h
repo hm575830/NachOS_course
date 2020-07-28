@@ -19,7 +19,8 @@
 
 // The following two classes define synchronized input and output to
 // a console device
-
+class Lock;
+class Semaphore;
 class SynchConsoleInput : public CallBackObj {
   public:
     SynchConsoleInput(char *inputFile); // Initialize the console device
